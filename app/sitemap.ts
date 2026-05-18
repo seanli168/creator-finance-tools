@@ -1,18 +1,52 @@
 import { MetadataRoute } from 'next';
 
+const youtubePages = [
+  '100k',
+  '1-million',
+  '10-million',
+  '50-million',
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
+  const dynamicPages = youtubePages.map((value) => ({
+    url: `https://creator-finance-tools.vercel.app/youtube-views/${value}`,
+    lastModified: new Date(),
+  }));
+
   return [
     {
-      url: 'http://localhost:3000',
+      url: 'https://creator-finance-tools.vercel.app',
       lastModified: new Date(),
     },
     {
-      url: 'http://localhost:3000/tools',
+      url: 'https://creator-finance-tools.vercel.app/tools',
       lastModified: new Date(),
     },
     {
-      url: 'http://localhost:3000/tools/youtube-money-calculator',
+      url: 'https://creator-finance-tools.vercel.app/about',
       lastModified: new Date(),
     },
+    {
+      url: 'https://creator-finance-tools.vercel.app/contact',
+      lastModified: new Date(),
+    },
+    {
+      url: 'https://creator-finance-tools.vercel.app/privacy-policy',
+      lastModified: new Date(),
+    },
+    {
+      url: 'https://creator-finance-tools.vercel.app/tools/youtube-money-calculator',
+      lastModified: new Date(),
+    },
+    {
+      url: 'https://creator-finance-tools.vercel.app/tools/tiktok-money-calculator',
+      lastModified: new Date(),
+    },
+    {
+      url: 'https://creator-finance-tools.vercel.app/tools/cpm-calculator',
+      lastModified: new Date(),
+    },
+
+    ...dynamicPages,
   ];
 }
