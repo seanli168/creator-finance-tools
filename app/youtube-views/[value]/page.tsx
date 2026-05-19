@@ -5,35 +5,33 @@ type Props = {
 };
 
 function estimateRevenue(value: string) {
-  if (value === '100k') {
-    return '$100 - $3,000';
-  }
+  const revenueMap: Record<string, string> = {
+    '10k': '$10 - $300',
+    '50k': '$50 - $1,500',
+    '100k': '$100 - $3,000',
+    '500k': '$500 - $15,000',
+    '1-million': '$1,000 - $30,000',
+    '5-million': '$5,000 - $150,000',
+    '10-million': '$10,000 - $300,000',
+    '50-million': '$50,000 - $1,500,000',
+  };
 
-  if (value === '1-million') {
-    return '$1,000 - $30,000';
-  }
-
-  if (value === '10-million') {
-    return '$10,000 - $300,000';
-  }
-
-  return '$500 - $10,000';
+  return revenueMap[value] || '$500 - $10,000';
 }
 
 function getCategory(value: string) {
-  if (value === '100k') {
-    return 'smaller creators';
-  }
+  const categoryMap: Record<string, string> = {
+    '10k': 'small creators',
+    '50k': 'growing creators',
+    '100k': 'smaller creators',
+    '500k': 'mid-level creators',
+    '1-million': 'mid-sized creators',
+    '5-million': 'large creators',
+    '10-million': 'major YouTube channels',
+    '50-million': 'top creators',
+  };
 
-  if (value === '1-million') {
-    return 'mid-sized creators';
-  }
-
-  if (value === '10-million') {
-    return 'large YouTube channels';
-  }
-
-  return 'YouTube creators';
+  return categoryMap[value] || 'YouTube creators';
 }
 
 export async function generateMetadata({

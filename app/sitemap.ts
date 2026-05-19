@@ -1,8 +1,12 @@
 import { MetadataRoute } from 'next';
 
 const youtubePages = [
+  '10k',
+  '50k',
   '100k',
+  '500k',
   '1-million',
+  '5-million',
   '10-million',
   '50-million',
 ];
