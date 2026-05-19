@@ -1,10 +1,52 @@
 import './globals.css';
 import Link from 'next/link';
+import type { Metadata } from "next";
 
-export const metadata = {
-  title: 'Creator Finance Tools',
+export const metadata: Metadata = {
+  title: {
+    default: 'Creator Finance Tools',
+    template: '%s | Creator Finance Tools',
+  },
+
   description:
-    'Free creator monetization calculators and finance tools.',
+    'Free creator monetization calculators for YouTube, TikTok, CPM, sponsorships, and online income estimation.',
+
+  keywords: [
+    'YouTube Money Calculator',
+    'TikTok Money Calculator',
+    'CPM Calculator',
+    'Creator Finance',
+    'YouTube CPM',
+    'Influencer Earnings',
+    'Creator Monetization',
+  ],
+
+  metadataBase: new URL(
+    'https://creator-finance-tools.vercel.app'
+  ),
+
+  openGraph: {
+    title: 'Creator Finance Tools',
+    description:
+      'Free online creator monetization calculators and SEO tools.',
+
+    url: 'https://creator-finance-tools.vercel.app',
+
+    siteName: 'Creator Finance Tools',
+
+    locale: 'en_US',
+
+    type: 'website',
+  },
+
+  twitter: {
+    card: 'summary_large_image',
+
+    title: 'Creator Finance Tools',
+
+    description:
+      'Estimate YouTube, TikTok, and creator earnings instantly.',
+  },
 };
 
 export default function RootLayout({

@@ -39,9 +39,29 @@ function getCategory(value: string) {
 export async function generateMetadata({
   params,
 }: Props) {
+  const value = params.value;
+
   return {
-    title: `How Much Does ${params.value} YouTube Views Make?`,
-    description: `Estimated YouTube earnings and CPM analysis for ${params.value} YouTube views.`,
+    title: `How Much Does ${value} YouTube Views Make?`,
+
+    description:
+      `Discover estimated YouTube earnings, CPM, and monetization insights for ${value} YouTube views.`,
+
+    openGraph: {
+      title: `How Much Does ${value} YouTube Views Make?`,
+
+      description:
+        `Estimated creator earnings and YouTube revenue analysis for ${value} views.`,
+    },
+
+    twitter: {
+      card: 'summary_large_image',
+
+      title: `How Much Does ${value} YouTube Views Make?`,
+
+      description:
+        `YouTube monetization estimates for ${value} views.`,
+    },
   };
 }
 
