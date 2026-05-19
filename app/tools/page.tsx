@@ -25,6 +25,12 @@ const tools = [
     'Estimate influencer sponsorship pricing and brand deal rates.',
   href: '/tools/sponsorship-calculator',
 },
+{
+  title: 'Engagement Rate Calculator',
+  description:
+    'Calculate Instagram, TikTok, and YouTube engagement rates.',
+  href: '/tools/engagement-rate-calculator',
+},
 ];
 
 const seoPages = [
