@@ -66,6 +66,6 @@ const dynamicTikTokPages = tiktokPages.map((value) => ({
     },
 
     ...dynamicPages,
-    dynamicPages
+    ...dynamicTikTokPages,
   ];
 }
