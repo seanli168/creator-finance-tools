@@ -3,6 +3,7 @@ import Link from 'next/link';
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  
   title: {
     default: 'Creator Finance Tools',
     template: '%s | Creator Finance Tools',
@@ -24,6 +25,10 @@ export const metadata: Metadata = {
   metadataBase: new URL(
     'https://creator-finance-tools.vercel.app'
   ),
+
+  verification: {
+  google: 'hLIw_o8BUFafwjpc0UcZKXStsz3XUIoKCUBlF7DnkaI',
+},
 
   openGraph: {
     title: 'Creator Finance Tools',
