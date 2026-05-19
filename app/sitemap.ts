@@ -20,7 +20,13 @@ const tiktokPages = [
   '5-million',
   '10-million',
 ];
-
+const instagramPages = [
+  '10k',
+  '50k',
+  '100k',
+  '500k',
+  '1-million',
+];
 export default function sitemap(): MetadataRoute.Sitemap {
   const dynamicPages = youtubePages.map((value) => ({
     url: `https://creator-finance-tools.vercel.app/youtube-views/${value}`,
@@ -28,6 +34,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 const dynamicTikTokPages = tiktokPages.map((value) => ({
   url: `https://creator-finance-tools.vercel.app/tiktok-views/${value}`,
+  lastModified: new Date(),
+}));
+const dynamicInstagramPages = instagramPages.map((value) => ({
+  url: `https://creator-finance-tools.vercel.app/instagram-followers/${value}`,
   lastModified: new Date(),
 }));
 
@@ -64,8 +74,13 @@ const dynamicTikTokPages = tiktokPages.map((value) => ({
       url: 'https://creator-finance-tools.vercel.app/tools/cpm-calculator',
       lastModified: new Date(),
     },
+    {
+  url: 'https://creator-finance-tools.vercel.app/tools/sponsorship-calculator',
+  lastModified: new Date(),
+},
 
     ...dynamicPages,
     ...dynamicTikTokPages,
+    ...dynamicInstagramPages,
   ];
 }

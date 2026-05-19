@@ -19,6 +19,12 @@ const tools = [
       'Calculate CPM based on revenue and impressions.',
     href: '/tools/cpm-calculator',
   },
+  {
+  title: 'Sponsorship Rate Calculator',
+  description:
+    'Estimate influencer sponsorship pricing and brand deal rates.',
+  href: '/tools/sponsorship-calculator',
+},
 ];
 
 const seoPages = [
