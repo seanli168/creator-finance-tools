@@ -4,6 +4,8 @@ type Props = {
   };
 };
 
+import Link from 'next/link';
+
 function estimateRevenue(value: string) {
   const revenueMap: Record<string, string> = {
     '10k': '$10 - $300',
@@ -109,6 +111,65 @@ export default function DynamicYouTubePage({
           from large view counts.
         </p>
       </div>
+      <section className="mt-20">
+  <h2 className="text-3xl font-bold mb-8">
+    Related YouTube Revenue Pages
+  </h2>
+
+  <div className="grid md:grid-cols-2 gap-6">
+    <Link
+      href="/youtube-views/100k"
+      className="border rounded-2xl p-6 hover:border-black transition"
+    >
+      <h3 className="text-2xl font-semibold">
+        100k YouTube Views Earnings
+      </h3>
+
+      <p className="mt-3 text-gray-600">
+        Estimate how much creators make from 100k views.
+      </p>
+    </Link>
+
+    <Link
+      href="/youtube-views/1-million"
+      className="border rounded-2xl p-6 hover:border-black transition"
+    >
+      <h3 className="text-2xl font-semibold">
+        1 Million YouTube Views Earnings
+      </h3>
+
+      <p className="mt-3 text-gray-600">
+        Revenue estimates for 1 million YouTube views.
+      </p>
+    </Link>
+
+    <Link
+      href="/youtube-views/5-million"
+      className="border rounded-2xl p-6 hover:border-black transition"
+    >
+      <h3 className="text-2xl font-semibold">
+        5 Million YouTube Views Earnings
+      </h3>
+
+      <p className="mt-3 text-gray-600">
+        Discover estimated income for large YouTube channels.
+      </p>
+    </Link>
+
+    <Link
+      href="/tools/youtube-money-calculator"
+      className="border rounded-2xl p-6 hover:border-black transition"
+    >
+      <h3 className="text-2xl font-semibold">
+        YouTube Money Calculator
+      </h3>
+
+      <p className="mt-3 text-gray-600">
+        Use our calculator to estimate YouTube revenue.
+      </p>
+    </Link>
+  </div>
+</section>
     </main>
   );
 }
