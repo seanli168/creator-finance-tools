@@ -11,11 +11,25 @@ const youtubePages = [
   '50-million',
 ];
 
+const tiktokPages = [
+  '10k',
+  '50k',
+  '100k',
+  '500k',
+  '1-million',
+  '5-million',
+  '10-million',
+];
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const dynamicPages = youtubePages.map((value) => ({
     url: `https://creator-finance-tools.vercel.app/youtube-views/${value}`,
     lastModified: new Date(),
   }));
+const dynamicTikTokPages = tiktokPages.map((value) => ({
+  url: `https://creator-finance-tools.vercel.app/tiktok-views/${value}`,
+  lastModified: new Date(),
+}));
 
   return [
     {
@@ -52,5 +66,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
 
     ...dynamicPages,
+    dynamicPages
   ];
 }
