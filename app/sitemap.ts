@@ -98,6 +98,10 @@ const dynamicInstagramPages = instagramPages.map((value) => ({
   url: 'https://creator-finance-tools.vercel.app/blog/cpm-vs-rpm',
   lastModified: new Date(),
 },
+{
+  url: 'https://creator-finance-tools.vercel.app/blog/highest-rpm-youtube-niches',
+  lastModified: new Date(),
+},
 
     ...dynamicPages,
     ...dynamicTikTokPages,
