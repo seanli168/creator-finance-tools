@@ -1,69 +1,23 @@
-import './globals.css';
+import type { Metadata } from 'next';
 import Link from 'next/link';
-import type { Metadata } from "next";
+import './globals.css';
 
 export const metadata: Metadata = {
-  
-  title: {
-    default: 'Creator Finance Tools',
-    template: '%s | Creator Finance Tools',
-  },
-
+  title: 'Creator Finance Tools',
   description:
-    'Free creator monetization calculators for YouTube, TikTok, CPM, sponsorships, and online income estimation.',
-
-  keywords: [
-    'YouTube Money Calculator',
-    'TikTok Money Calculator',
-    'CPM Calculator',
-    'Creator Finance',
-    'YouTube CPM',
-    'Influencer Earnings',
-    'Creator Monetization',
-  ],
-
-  metadataBase: new URL(
-    'https://creator-finance-tools.vercel.app'
-  ),
-
-  verification: {
-  google: 'hLIw_o8BUFafwjpc0UcZKXStsz3XUIoKCUBlF7DnkaI',
-},
-
-  openGraph: {
-    title: 'Creator Finance Tools',
-    description:
-      'Free online creator monetization calculators and SEO tools.',
-
-    url: 'https://creator-finance-tools.vercel.app',
-
-    siteName: 'Creator Finance Tools',
-
-    locale: 'en_US',
-
-    type: 'website',
-  },
-
-  twitter: {
-    card: 'summary_large_image',
-
-    title: 'Creator Finance Tools',
-
-    description:
-      'Estimate YouTube, TikTok, and creator earnings instantly.',
-  },
+    'Free creator economy calculators and monetization tools.',
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en">
-      <body>
+      <body className="bg-white text-black">
         <header className="border-b">
-          <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+          <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between">
             <Link
               href="/"
               className="text-2xl font-bold"
@@ -71,21 +25,77 @@ export default function RootLayout({
               Creator Finance Tools
             </Link>
 
-            <nav className="flex gap-6 text-sm font-medium">
-              <Link href="/">Home</Link>
-              <Link href="/tools">Tools</Link>
-              <Link href="/about">About</Link>
-              <Link href="/privacy-policy">Privacy</Link>
-               <Link href="/contact">Contact</Link>
+            <nav className="flex items-center gap-6 text-sm font-medium">
+              <Link
+                href="/"
+                className="hover:text-gray-600"
+              >
+                Home
+              </Link>
+
+              <Link
+                href="/tools"
+                className="hover:text-gray-600"
+              >
+                Tools
+              </Link>
+
+              <Link
+                href="/about"
+                className="hover:text-gray-600"
+              >
+                About
+              </Link>
+
+              <Link
+                href="/contact"
+                className="hover:text-gray-600"
+              >
+                Contact
+              </Link>
+
+              <Link
+                href="/privacy"
+                className="hover:text-gray-600"
+              >
+                Privacy
+              </Link>
             </nav>
           </div>
         </header>
 
         {children}
 
-        <footer className="border-t mt-20">
-          <div className="max-w-6xl mx-auto px-6 py-10 text-sm text-gray-500">
-            © 2026 Creator Finance Tools
+        <footer className="border-t mt-24">
+          <div className="max-w-6xl mx-auto px-6 py-10">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+              <p className="text-gray-600 text-sm">
+                © 2026 Creator Finance Tools. All rights reserved.
+              </p>
+
+              <div className="flex items-center gap-6 text-sm">
+                <Link
+                  href="/about"
+                  className="hover:text-gray-600"
+                >
+                  About
+                </Link>
+
+                <Link
+                  href="/contact"
+                  className="hover:text-gray-600"
+                >
+                  Contact
+                </Link>
+
+                <Link
+                  href="/privacy"
+                  className="hover:text-gray-600"
+                >
+                  Privacy
+                </Link>
+              </div>
+            </div>
           </div>
         </footer>
       </body>
