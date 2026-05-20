@@ -1,12 +1,7 @@
 import Link from 'next/link';
 
 const tools = [
-  {
-  title: 'RPM Calculator',
-  description:
-    'Calculate YouTube RPM using revenue and views.',
-  href: '/tools/rpm-calculator',
-},
+
   {
     title: 'YouTube Money Calculator',
     description:
@@ -36,6 +31,18 @@ const tools = [
   description:
     'Calculate Instagram, TikTok, and YouTube engagement rates.',
   href: '/tools/engagement-rate-calculator',
+},
+  {
+  title: 'RPM Calculator',
+  description:
+    'Calculate YouTube RPM using revenue and views.',
+  href: '/tools/rpm-calculator',
+},
+{
+  title: 'Twitch Money Calculator',
+  description:
+    'Estimate Twitch streamer income from subscribers, ads, and donations.',
+  href: '/tools/twitch-money-calculator',
 },
 ];
 
