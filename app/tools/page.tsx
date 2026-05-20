@@ -44,6 +44,12 @@ const tools = [
     'Estimate Twitch streamer income from subscribers, ads, and donations.',
   href: '/tools/twitch-money-calculator',
 },
+{
+  title: 'Affiliate Income Calculator',
+  description:
+    'Estimate affiliate marketing income using traffic and conversion rates.',
+  href: '/tools/affiliate-income-calculator',
+},
 ];
 
 const seoPages = [
