@@ -55,7 +55,7 @@ export default function RootLayout({
               </Link>
 
               <Link
-                href="/privacy"
+                href="/privacy-policy"
                 className="hover:text-gray-600"
               >
                 Privacy
@@ -89,7 +89,7 @@ export default function RootLayout({
                 </Link>
 
                 <Link
-                  href="/privacy"
+                  href="/privacy-policy"
                   className="hover:text-gray-600"
                 >
                   Privacy
