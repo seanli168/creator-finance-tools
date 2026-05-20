@@ -2,6 +2,12 @@ import Link from 'next/link';
 
 const tools = [
   {
+  title: 'RPM Calculator',
+  description:
+    'Calculate YouTube RPM using revenue and views.',
+  href: '/tools/rpm-calculator',
+},
+  {
     title: 'YouTube Money Calculator',
     description:
       'Estimate YouTube earnings based on views and CPM.',

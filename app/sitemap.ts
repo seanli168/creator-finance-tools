@@ -43,6 +43,10 @@ const dynamicInstagramPages = instagramPages.map((value) => ({
 
   return [
     {
+  url: 'https://creator-finance-tools.vercel.app/tools/rpm-calculator',
+  lastModified: new Date(),
+},
+    {
       url: 'https://creator-finance-tools.vercel.app',
       lastModified: new Date(),
     },
