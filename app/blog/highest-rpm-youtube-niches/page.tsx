@@ -97,6 +97,40 @@ export default function HighestRPMNichesPage() {
           </Link>
         </div>
       </div>
+
+      <section className="mt-24">
+        <h2 className="text-3xl font-bold mb-8">
+          Related Articles
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          <Link
+            href="/blog/cpm-vs-rpm"
+            className="border rounded-2xl p-8 hover:border-black transition"
+          >
+            <h3 className="text-2xl font-semibold">
+              CPM vs RPM: What’s the Difference?
+            </h3>
+
+            <p className="mt-4 text-gray-600">
+              Learn how CPM and RPM affect creator earnings.
+            </p>
+          </Link>
+
+          <Link
+            href="/tools/cpm-calculator"
+            className="border rounded-2xl p-8 hover:border-black transition"
+          >
+            <h3 className="text-2xl font-semibold">
+              CPM Calculator
+            </h3>
+
+            <p className="mt-4 text-gray-600">
+              Calculate advertising CPM instantly.
+            </p>
+          </Link>
+        </div>
+      </section>
     </main>
   );
 }

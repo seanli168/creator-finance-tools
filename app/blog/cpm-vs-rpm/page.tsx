@@ -90,6 +90,40 @@ export default function CPMvsRPMPage() {
           </Link>
         </div>
       </div>
+
+      <section className="mt-24">
+        <h2 className="text-3xl font-bold mb-8">
+          Related Articles
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          <Link
+            href="/blog/highest-rpm-youtube-niches"
+            className="border rounded-2xl p-8 hover:border-black transition"
+          >
+            <h3 className="text-2xl font-semibold">
+              Highest RPM YouTube Niches
+            </h3>
+
+            <p className="mt-4 text-gray-600">
+              Discover the most profitable YouTube niches.
+            </p>
+          </Link>
+
+          <Link
+            href="/tools/rpm-calculator"
+            className="border rounded-2xl p-8 hover:border-black transition"
+          >
+            <h3 className="text-2xl font-semibold">
+              RPM Calculator
+            </h3>
+
+            <p className="mt-4 text-gray-600">
+              Calculate YouTube RPM instantly.
+            </p>
+          </Link>
+        </div>
+      </section>
     </main>
   );
 }
