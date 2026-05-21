@@ -1,11 +1,11 @@
-import { MetadataRoute } from 'next';
-
-export default function robots(): MetadataRoute.Robots {
+export default function robots() {
   return {
     rules: {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'http://localhost:3000/sitemap.xml',
+
+    sitemap:
+      'https://creator-finance-tools.vercel.app/sitemap.xml',
   };
 }
