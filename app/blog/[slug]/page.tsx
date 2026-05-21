@@ -75,6 +75,10 @@ export default async function DynamicBlogPage({
     notFound();
   }
 
+  const relatedPosts = Object.entries(pages)
+    .filter(([key]) => key !== slug)
+    .slice(0, 3);
+
   return (
     <main className="max-w-4xl mx-auto px-6 py-16">
       <h1 className="text-5xl font-bold">
@@ -126,6 +130,30 @@ export default async function DynamicBlogPage({
           </Link>
         </div>
       </div>
+
+      <section className="mt-24">
+        <h2 className="text-3xl font-bold mb-8">
+          Related RPM Articles
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {relatedPosts.map(([key, post]) => (
+            <Link
+              key={key}
+              href={`/blog/${key}`}
+              className="border rounded-2xl p-6 hover:border-black transition"
+            >
+              <h3 className="text-xl font-semibold">
+                {post.title}
+              </h3>
+
+              <p className="mt-3 text-gray-600">
+                {post.description}
+              </p>
+            </Link>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }
