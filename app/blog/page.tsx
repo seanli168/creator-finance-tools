@@ -1,88 +1,41 @@
-import Link from 'next/link';
+export const dynamic = 'force-static';
 
-const posts = [
-  {
-    title: 'CPM vs RPM: What’s the Difference?',
-    description:
-      'Learn how CPM and RPM affect creator earnings.',
-    href: '/blog/cpm-vs-rpm',
-  },
+import { blogPosts } from '@/app/data/blogData';
 
-  {
-    title: 'Highest RPM YouTube Niches',
-    description:
-      'Discover the most profitable YouTube niches for creators.',
-    href: '/blog/highest-rpm-youtube-niches',
-  },
+export async function generateStaticParams() {
+  return blogPosts.map((post) => ({
+    slug: post.slug,
+  }));
+}
 
-  {
-    title: 'Finance YouTube RPM',
-    description:
-      'Discover finance niche RPM averages on YouTube.',
-    href: '/blog/youtube-rpm-finance',
-  },
+export default async function Page({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
 
-  {
-    title: 'Business YouTube RPM',
-    description:
-      'Explore business niche RPM rates on YouTube.',
-    href: '/blog/youtube-rpm-business',
-  },
+  const post = blogPosts.find(
+    (p) => p.slug === slug
+  );
 
-  {
-    title: 'Gaming YouTube RPM',
-    description:
-      'Learn average RPM for gaming YouTube channels.',
-    href: '/blog/youtube-rpm-gaming',
-  },
+  if (!post) {
+    return <div>Post not found</div>;
+  }
 
-  {
-    title: 'Education YouTube RPM',
-    description:
-      'See estimated RPM rates for educational creators.',
-    href: '/blog/youtube-rpm-education',
-  },
-];
-
-export const metadata = {
-  title: 'Creator Blog',
-  description:
-    'Creator economy guides, monetization tips, and SEO resources.',
-};
-
-export default function BlogPage() {
   return (
-    <main className="max-w-6xl mx-auto px-6 py-16">
-      <section className="text-center">
-        <h1 className="text-5xl font-bold">
-          Creator Blog
-        </h1>
+    <main className="max-w-4xl mx-auto px-6 py-16">
+      <h1 className="text-5xl font-bold">
+        {post.title}
+      </h1>
 
-        <p className="mt-6 text-xl text-gray-600 max-w-3xl mx-auto">
-          Creator monetization guides, YouTube SEO tips,
-          RPM strategies, and creator economy insights.
-        </p>
-      </section>
+      <p className="mt-8 text-xl text-gray-600">
+        {post.description}
+      </p>
 
-      <section className="mt-20">
-        <div className="grid md:grid-cols-2 gap-8">
-          {posts.map((post) => (
-            <Link
-              key={post.href}
-              href={post.href}
-              className="border rounded-2xl p-8 hover:border-black transition"
-            >
-              <h2 className="text-2xl font-semibold">
-                {post.title}
-              </h2>
-
-              <p className="mt-4 text-gray-600">
-                {post.description}
-              </p>
-            </Link>
-          ))}
-        </div>
-      </section>
+      <p className="mt-6 text-3xl font-bold">
+        {post.rpm}
+      </p>
     </main>
   );
 }

@@ -1,5 +1,5 @@
 import { blogPosts } from '@/app/data/blogData';
-
+export const dynamic = 'force-static';
 export async function generateStaticParams() {
   return blogPosts.map((post) => ({
     slug: post.slug,

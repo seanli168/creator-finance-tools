@@ -1,5 +1,19 @@
+export const dynamic = 'force-static';
+
 import Link from 'next/link';
 import { blogPosts } from '@/app/data/blogData';
+
+export async function generateStaticParams() {
+  const tags = [
+    ...new Set(
+      blogPosts.flatMap((post) => post.tags)
+    ),
+  ];
+
+  return tags.map((tag) => ({
+    tag,
+  }));
+}
 
 export default async function TagPage({
   params,
@@ -9,7 +23,7 @@ export default async function TagPage({
   const { tag } = await params;
 
   const posts = blogPosts.filter((post) =>
-    post.tags?.includes(tag)
+    post.tags.includes(tag)
   );
 
   return (
@@ -18,25 +32,18 @@ export default async function TagPage({
         {tag} Creator RPM
       </h1>
 
-      <p className="mt-6 text-xl text-gray-600">
-        Explore creator monetization articles related to
-        {' '}
-        {tag}
-        .
-      </p>
-
       <div className="grid md:grid-cols-3 gap-8 mt-16">
         {posts.map((post) => (
           <Link
             key={post.slug}
             href={`/blog/${post.slug}`}
-            className="border rounded-2xl p-6 hover:border-black transition"
+            className="border rounded-2xl p-6"
           >
             <h2 className="text-2xl font-semibold">
               {post.title}
             </h2>
 
-            <p className="mt-4 text-gray-600">
+            <p className="mt-4">
               {post.description}
             </p>
 
