@@ -98,4 +98,13 @@ export const blogPosts = [
     description:
       'Technology channels attract software advertisers.',
   },
+  {
+  slug: 'youtube-rpm-law',
+  title: 'Law YouTube RPM',
+  category: 'youtube',
+  tags: ['law', 'youtube'],
+  rpm: '$20 - $50',
+  description:
+    'Law channels have some of the highest RPMs online.',
+},
 ];
