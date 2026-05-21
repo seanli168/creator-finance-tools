@@ -41,6 +41,13 @@ export default function RootLayout({
               </Link>
 
               <Link
+                href="/blog"
+                className="hover:text-gray-600"
+              >
+                Blog
+              </Link>
+
+              <Link
                 href="/about"
                 className="hover:text-gray-600"
               >
@@ -74,6 +81,13 @@ export default function RootLayout({
               </p>
 
               <div className="flex items-center gap-6 text-sm">
+                <Link
+                  href="/blog"
+                  className="hover:text-gray-600"
+                >
+                  Blog
+                </Link>
+
                 <Link
                   href="/about"
                   className="hover:text-gray-600"
