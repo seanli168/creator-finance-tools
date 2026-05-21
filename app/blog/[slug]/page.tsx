@@ -79,8 +79,31 @@ export default async function DynamicBlogPage({
     .filter(([key]) => key !== slug)
     .slice(0, 3);
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: `${page.title} in 2026`,
+    description: page.description,
+    author: {
+      '@type': 'Organization',
+      name: 'Creator Finance Tools',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Creator Finance Tools',
+    },
+    datePublished: '2026-01-01',
+  };
+
   return (
     <main className="max-w-4xl mx-auto px-6 py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd),
+        }}
+      />
+
       <h1 className="text-5xl font-bold">
         {page.title} in 2026
       </h1>
