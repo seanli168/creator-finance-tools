@@ -1,99 +1,36 @@
-const dynamicBlogPages = [
-  'youtube-rpm-finance',
-  'youtube-rpm-business',
-  'youtube-rpm-gaming',
-  'youtube-rpm-education',
-];
+import { MetadataRoute } from 'next';
+import { blogPosts } from '@/app/data/blogData';
 
-export default function sitemap() {
-  const dynamicPages = dynamicBlogPages.map(
-    (slug) => ({
-      url: `https://creator-finance-tools.vercel.app/blog/${slug}`,
-      lastModified: new Date(),
-    })
-  );
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl =
+    'https://creator-finance-tools.vercel.app';
+
+  const blogUrls = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: new Date(),
+  }));
 
   return [
     {
-      url: 'https://creator-finance-tools.vercel.app',
+      url: baseUrl,
       lastModified: new Date(),
     },
 
     {
-      url: 'https://creator-finance-tools.vercel.app/tools',
+      url: `${baseUrl}/blog`,
       lastModified: new Date(),
     },
 
     {
-      url: 'https://creator-finance-tools.vercel.app/blog',
+      url: `${baseUrl}/tools/rpm-calculator`,
       lastModified: new Date(),
     },
 
     {
-      url: 'https://creator-finance-tools.vercel.app/about',
+      url: `${baseUrl}/tools/youtube-money-calculator`,
       lastModified: new Date(),
     },
 
-    {
-      url: 'https://creator-finance-tools.vercel.app/contact',
-      lastModified: new Date(),
-    },
-
-    {
-      url: 'https://creator-finance-tools.vercel.app/privacy-policy',
-      lastModified: new Date(),
-    },
-
-    {
-      url: 'https://creator-finance-tools.vercel.app/blog/cpm-vs-rpm',
-      lastModified: new Date(),
-    },
-
-    {
-      url: 'https://creator-finance-tools.vercel.app/blog/highest-rpm-youtube-niches',
-      lastModified: new Date(),
-    },
-
-    {
-      url: 'https://creator-finance-tools.vercel.app/tools/youtube-money-calculator',
-      lastModified: new Date(),
-    },
-
-    {
-      url: 'https://creator-finance-tools.vercel.app/tools/tiktok-money-calculator',
-      lastModified: new Date(),
-    },
-
-    {
-      url: 'https://creator-finance-tools.vercel.app/tools/cpm-calculator',
-      lastModified: new Date(),
-    },
-
-    {
-      url: 'https://creator-finance-tools.vercel.app/tools/rpm-calculator',
-      lastModified: new Date(),
-    },
-
-    {
-      url: 'https://creator-finance-tools.vercel.app/tools/engagement-rate-calculator',
-      lastModified: new Date(),
-    },
-
-    {
-      url: 'https://creator-finance-tools.vercel.app/tools/sponsorship-calculator',
-      lastModified: new Date(),
-    },
-
-    {
-      url: 'https://creator-finance-tools.vercel.app/tools/twitch-money-calculator',
-      lastModified: new Date(),
-    },
-
-    {
-      url: 'https://creator-finance-tools.vercel.app/tools/affiliate-income-calculator',
-      lastModified: new Date(),
-    },
-
-    ...dynamicPages,
+    ...blogUrls,
   ];
 }

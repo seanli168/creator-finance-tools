@@ -1,110 +1,51 @@
 export const blogPosts = [
-  {
-    slug: 'youtube-rpm-finance',
-    title: 'Finance YouTube RPM',
-    category: 'youtube',
-    tags: ['finance', 'youtube'],
-    rpm: '$15 - $40',
-    description:
-      'Finance is one of the highest RPM niches on YouTube.',
-  },
+  { slug: 'youtube-rpm-finance', title: 'Finance YouTube RPM', rpm: '$15 - $40', description: 'Finance is one of the highest RPM niches on YouTube.', category: 'youtube', tags: ['finance','youtube'] },
+  { slug: 'youtube-rpm-business', title: 'Business YouTube RPM', rpm: '$10 - $30', description: 'Business content attracts high-paying advertisers.', category: 'youtube', tags: ['business','youtube'] },
+  { slug: 'youtube-rpm-gaming', title: 'Gaming YouTube RPM', rpm: '$2 - $6', description: 'Gaming has lower RPM but massive audience potential.', category: 'youtube', tags: ['gaming','youtube'] },
+  { slug: 'youtube-rpm-education', title: 'Education YouTube RPM', rpm: '$4 - $12', description: 'Educational channels often receive stable advertiser demand.', category: 'youtube', tags: ['education','youtube'] },
+  { slug: 'youtube-rpm-ai', title: 'AI YouTube RPM', rpm: '$12 - $35', description: 'AI content has rapidly growing advertiser demand.', category: 'youtube', tags: ['ai','youtube'] },
+  { slug: 'youtube-rpm-tech', title: 'Tech YouTube RPM', rpm: '$8 - $22', description: 'Technology channels attract software advertisers.', category: 'youtube', tags: ['tech','youtube'] },
+  { slug: 'youtube-rpm-marketing', title: 'Marketing YouTube RPM', rpm: '$8 - $20', description: 'Marketing content attracts business advertisers.', category: 'youtube', tags: ['marketing','youtube'] },
+  { slug: 'youtube-rpm-real-estate', title: 'Real Estate YouTube RPM', rpm: '$12 - $38', description: 'Real estate is one of the highest paying niches online.', category: 'youtube', tags: ['real-estate','youtube'] },
+  { slug: 'youtube-rpm-insurance', title: 'Insurance YouTube RPM', rpm: '$15 - $45', description: 'Insurance keywords are among the most expensive in advertising.', category: 'youtube', tags: ['insurance','youtube'] },
+  { slug: 'youtube-rpm-investing', title: 'Investing YouTube RPM', rpm: '$15 - $40', description: 'Investing content consistently ranks among top RPM niches.', category: 'youtube', tags: ['investing','youtube'] },
 
-  {
-    slug: 'youtube-rpm-business',
-    title: 'Business YouTube RPM',
-    category: 'youtube',
-    tags: ['business', 'youtube'],
-    rpm: '$10 - $30',
-    description:
-      'Business content attracts high-paying advertisers.',
-  },
+  { slug: 'tiktok-rpm-finance', title: 'Finance TikTok RPM', rpm: '$5 - $15', description: 'Finance content on TikTok can earn high RPM.', category: 'tiktok', tags: ['finance','tiktok'] },
+  { slug: 'tiktok-rpm-business', title: 'Business TikTok RPM', rpm: '$4 - $12', description: 'Business TikTok videos attract advertisers.', category: 'tiktok', tags: ['business','tiktok'] },
+  { slug: 'tiktok-rpm-gaming', title: 'Gaming TikTok RPM', rpm: '$1 - $5', description: 'Gaming content has lower RPM but high engagement.', category: 'tiktok', tags: ['gaming','tiktok'] },
+  { slug: 'tiktok-rpm-education', title: 'Education TikTok RPM', rpm: '$3 - $10', description: 'Educational TikTok content gets steady monetization.', category: 'tiktok', tags: ['education','tiktok'] },
+  { slug: 'tiktok-rpm-ai', title: 'AI TikTok RPM', rpm: '$6 - $18', description: 'AI content on TikTok is trending and monetizable.', category: 'tiktok', tags: ['ai','tiktok'] },
+  { slug: 'tiktok-rpm-marketing', title: 'Marketing TikTok RPM', rpm: '$4 - $12', description: 'Marketing content attracts business sponsors.', category: 'tiktok', tags: ['marketing','tiktok'] },
+  { slug: 'tiktok-rpm-real-estate', title: 'Real Estate TikTok RPM', rpm: '$8 - $20', description: 'Real estate content is lucrative on TikTok.', category: 'tiktok', tags: ['real-estate','tiktok'] },
+  { slug: 'tiktok-rpm-insurance', title: 'Insurance TikTok RPM', rpm: '$10 - $25', description: 'Insurance ads are high-paying on TikTok.', category: 'tiktok', tags: ['insurance','tiktok'] },
+  { slug: 'tiktok-rpm-investing', title: 'Investing TikTok RPM', rpm: '$10 - $30', description: 'Investing niche performs well monetization-wise.', category: 'tiktok', tags: ['investing','tiktok'] },
+  { slug: 'tiktok-rpm-tech', title: 'Tech TikTok RPM', rpm: '$5 - $15', description: 'Tech content can attract high-value ads.', category: 'tiktok', tags: ['tech','tiktok'] },
 
-  {
-    slug: 'youtube-rpm-gaming',
-    title: 'Gaming YouTube RPM',
-    category: 'youtube',
-    tags: ['gaming', 'youtube'],
-    rpm: '$2 - $6',
-    description:
-      'Gaming has lower RPM but massive audience potential.',
-  },
+  { slug: 'instagram-rpm-finance', title: 'Finance Instagram RPM', rpm: '$6 - $20', description: 'Finance posts on Instagram can earn good revenue.', category: 'instagram', tags: ['finance','instagram'] },
+  { slug: 'instagram-rpm-business', title: 'Business Instagram RPM', rpm: '$5 - $15', description: 'Business Instagram content monetizes well.', category: 'instagram', tags: ['business','instagram'] },
+  { slug: 'instagram-rpm-gaming', title: 'Gaming Instagram RPM', rpm: '$2 - $6', description: 'Gaming niche is less monetizable on Instagram.', category: 'instagram', tags: ['gaming','instagram'] },
+  { slug: 'instagram-rpm-education', title: 'Education Instagram RPM', rpm: '$3 - $10', description: 'Educational posts monetize steadily.', category: 'instagram', tags: ['education','instagram'] },
+  { slug: 'instagram-rpm-ai', title: 'AI Instagram RPM', rpm: '$5 - $15', description: 'AI content is trending and profitable.', category: 'instagram', tags: ['ai','instagram'] },
+  { slug: 'instagram-rpm-marketing', title: 'Marketing Instagram RPM', rpm: '$4 - $12', description: 'Marketing content attracts sponsors.', category: 'instagram', tags: ['marketing','instagram'] },
+  { slug: 'instagram-rpm-real-estate', title: 'Real Estate Instagram RPM', rpm: '$7 - $20', description: 'Real estate content monetizes well.', category: 'instagram', tags: ['real-estate','instagram'] },
+  { slug: 'instagram-rpm-insurance', title: 'Insurance Instagram RPM', rpm: '$10 - $25', description: 'Insurance posts are high-paying.', category: 'instagram', tags: ['insurance','instagram'] },
+  { slug: 'instagram-rpm-investing', title: 'Investing Instagram RPM', rpm: '$8 - $22', description: 'Investing posts monetize steadily.', category: 'instagram', tags: ['investing','instagram'] },
+  { slug: 'instagram-rpm-tech', title: 'Tech Instagram RPM', rpm: '$5 - $15', description: 'Tech content is monetizable on Instagram.', category: 'instagram', tags: ['tech','instagram'] },
 
-  {
-    slug: 'youtube-rpm-education',
-    title: 'Education YouTube RPM',
-    category: 'youtube',
-    tags: ['education', 'youtube'],
-    rpm: '$4 - $12',
-    description:
-      'Educational channels often receive stable advertiser demand.',
-  },
-
-  {
-    slug: 'youtube-rpm-ai',
-    title: 'AI YouTube RPM',
-    category: 'youtube',
-    tags: ['ai', 'youtube'],
-    rpm: '$12 - $35',
-    description:
-      'AI content has rapidly growing advertiser demand.',
-  },
-
-  {
-    slug: 'youtube-rpm-marketing',
-    title: 'Marketing YouTube RPM',
-    category: 'youtube',
-    tags: ['marketing', 'youtube'],
-    rpm: '$8 - $20',
-    description:
-      'Marketing content attracts business advertisers.',
-  },
-
-  {
-    slug: 'youtube-rpm-real-estate',
-    title: 'Real Estate YouTube RPM',
-    category: 'youtube',
-    tags: ['real-estate', 'youtube'],
-    rpm: '$12 - $38',
-    description:
-      'Real estate is one of the highest paying niches online.',
-  },
-
-  {
-    slug: 'youtube-rpm-insurance',
-    title: 'Insurance YouTube RPM',
-    category: 'youtube',
-    tags: ['insurance', 'youtube'],
-    rpm: '$15 - $45',
-    description:
-      'Insurance keywords are among the most expensive in advertising.',
-  },
-
-  {
-    slug: 'youtube-rpm-investing',
-    title: 'Investing YouTube RPM',
-    category: 'youtube',
-    tags: ['investing', 'youtube'],
-    rpm: '$15 - $40',
-    description:
-      'Investing content consistently ranks among top RPM niches.',
-  },
-
-  {
-    slug: 'youtube-rpm-tech',
-    title: 'Tech YouTube RPM',
-    category: 'youtube',
-    tags: ['tech', 'youtube'],
-    rpm: '$8 - $22',
-    description:
-      'Technology channels attract software advertisers.',
-  },
-  {
-  slug: 'youtube-rpm-law',
-  title: 'Law YouTube RPM',
-  category: 'youtube',
-  tags: ['law', 'youtube'],
-  rpm: '$20 - $50',
-  description:
-    'Law channels have some of the highest RPMs online.',
-},
+  // 继续补充到 50 条
+  { slug: 'youtube-rpm-fitness', title: 'Fitness YouTube RPM', rpm: '$4 - $12', description: 'Fitness channels monetize through coaching and supplements.', category: 'youtube', tags: ['fitness','youtube'] },
+  { slug: 'youtube-rpm-travel', title: 'Travel YouTube RPM', rpm: '$3 - $10', description: 'Travel channels monetize based on location and audience.', category: 'youtube', tags: ['travel','youtube'] },
+  { slug: 'youtube-rpm-food', title: 'Food YouTube RPM', rpm: '$2 - $8', description: 'Food channels monetize via sponsorships and ads.', category: 'youtube', tags: ['food','youtube'] },
+  { slug: 'youtube-rpm-cars', title: 'Automotive YouTube RPM', rpm: '$6 - $18', description: 'Car channels attract premium automotive advertisers.', category: 'youtube', tags: ['cars','youtube'] },
+  { slug: 'youtube-rpm-entrepreneurship', title: 'Entrepreneurship YouTube RPM', rpm: '$10 - $30', description: 'Entrepreneurship content is monetizable.', category: 'youtube', tags: ['entrepreneurship','youtube'] },
+  { slug: 'tiktok-rpm-fitness', title: 'Fitness TikTok RPM', rpm: '$1 - $5', description: 'Fitness content engages audience but RPM is low.', category: 'tiktok', tags: ['fitness','tiktok'] },
+  { slug: 'tiktok-rpm-travel', title: 'Travel TikTok RPM', rpm: '$1 - $6', description: 'Travel niche performs moderately.', category: 'tiktok', tags: ['travel','tiktok'] },
+  { slug: 'tiktok-rpm-food', title: 'Food TikTok RPM', rpm: '$1 - $5', description: 'Food content is low RPM but high engagement.', category: 'tiktok', tags: ['food','tiktok'] },
+  { slug: 'instagram-rpm-fitness', title: 'Fitness Instagram RPM', rpm: '$2 - $8', description: 'Fitness posts monetize with sponsorships.', category: 'instagram', tags: ['fitness','instagram'] },
+  { slug: 'instagram-rpm-travel', title: 'Travel Instagram RPM', rpm: '$2 - $8', description: 'Travel content monetizes slowly.', category: 'instagram', tags: ['travel','instagram'] },
+  { slug: 'instagram-rpm-food', title: 'Food Instagram RPM', rpm: '$2 - $7', description: 'Food niche monetizes via ads and sponsors.', category: 'instagram', tags: ['food','instagram'] },
+  { slug: 'instagram-rpm-cars', title: 'Automotive Instagram RPM', rpm: '$3 - $10', description: 'Car content monetizes via sponsors.', category: 'instagram', tags: ['cars','instagram'] },
+  { slug: 'youtube-rpm-lifestyle', title: 'Lifestyle YouTube RPM', rpm: '$5 - $15', description: 'Lifestyle channels have medium RPM.', category: 'youtube', tags: ['lifestyle','youtube'] },
+  { slug: 'tiktok-rpm-lifestyle', title: 'Lifestyle TikTok RPM', rpm: '$2 - $8', description: 'Lifestyle TikTok content RPM is modest.', category: 'tiktok', tags: ['lifestyle','tiktok'] },
+  { slug: 'instagram-rpm-lifestyle', title: 'Lifestyle Instagram RPM', rpm: '$3 - $10', description: 'Lifestyle Instagram posts monetize via sponsors.', category: 'instagram', tags: ['lifestyle','instagram'] },
 ];
