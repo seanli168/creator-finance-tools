@@ -33,6 +33,94 @@ const pages = {
     description:
       'Educational channels often receive stable advertiser demand.',
   },
+
+  'youtube-rpm-tech': {
+    title: 'Tech YouTube RPM',
+    niche: 'Technology',
+    rpm: '$8 - $22',
+    description:
+      'Technology channels attract software and hardware advertisers.',
+  },
+
+  'youtube-rpm-ai': {
+    title: 'AI YouTube RPM',
+    niche: 'Artificial Intelligence',
+    rpm: '$12 - $35',
+    description:
+      'AI content has rapidly growing advertiser demand.',
+  },
+
+  'youtube-rpm-marketing': {
+    title: 'Marketing YouTube RPM',
+    niche: 'Marketing',
+    rpm: '$8 - $20',
+    description:
+      'Marketing content attracts business advertisers.',
+  },
+
+  'youtube-rpm-crypto': {
+    title: 'Crypto YouTube RPM',
+    niche: 'Cryptocurrency',
+    rpm: '$10 - $30',
+    description:
+      'Crypto advertisers often pay high CPM rates.',
+  },
+
+  'youtube-rpm-real-estate': {
+    title: 'Real Estate YouTube RPM',
+    niche: 'Real Estate',
+    rpm: '$12 - $38',
+    description:
+      'Real estate is one of the highest paying niches online.',
+  },
+
+  'youtube-rpm-insurance': {
+    title: 'Insurance YouTube RPM',
+    niche: 'Insurance',
+    rpm: '$15 - $45',
+    description:
+      'Insurance keywords are among the most expensive in advertising.',
+  },
+
+  'youtube-rpm-fitness': {
+    title: 'Fitness YouTube RPM',
+    niche: 'Fitness',
+    rpm: '$4 - $12',
+    description:
+      'Fitness channels monetize through supplements and coaching.',
+  },
+
+  'youtube-rpm-travel': {
+    title: 'Travel YouTube RPM',
+    niche: 'Travel',
+    rpm: '$3 - $10',
+    description:
+      'Travel RPM varies heavily by audience location.',
+  },
+
+  'youtube-rpm-food': {
+    title: 'Food YouTube RPM',
+    niche: 'Food',
+    rpm: '$2 - $8',
+    description:
+      'Food channels rely heavily on broad audience reach.',
+  },
+
+  'youtube-rpm-cars': {
+    title: 'Automotive YouTube RPM',
+    niche: 'Automotive',
+    rpm: '$6 - $18',
+    description:
+      'Car-related advertisers often pay premium CPM rates.',
+  },
+
+  'youtube-rpm-investing': {
+    title: 'Investing YouTube RPM',
+    niche: 'Investing',
+    rpm: '$15 - $40',
+    description:
+      'Investing content consistently ranks among top RPM niches.',
+  },
 };
 
 export async function generateStaticParams() {
@@ -77,7 +165,7 @@ export default async function DynamicBlogPage({
 
   const relatedPosts = Object.entries(pages)
     .filter(([key]) => key !== slug)
-    .slice(0, 3);
+    .slice(0, 6);
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -115,23 +203,23 @@ export default async function DynamicBlogPage({
 
         <p>{page.rpm}</p>
 
-        <h2>Why This Niche Has This RPM</h2>
+        <h2>Why This Niche Has High RPM</h2>
 
         <p>
-          Advertiser competition, audience demographics,
-          and viewer purchasing power heavily influence RPM.
+          RPM depends on advertiser competition,
+          audience purchasing power, and monetization quality.
         </p>
 
         <h2>Ways to Increase RPM</h2>
 
         <ul>
           <li>Create advertiser-friendly content</li>
-          <li>Target US and UK audiences</li>
-          <li>Improve watch time</li>
-          <li>Use better monetization strategies</li>
+          <li>Target Tier 1 countries</li>
+          <li>Increase audience retention</li>
+          <li>Publish long-form content</li>
         </ul>
 
-        <h2>Useful Tools</h2>
+        <h2>Useful Creator Tools</h2>
 
         <div className="grid md:grid-cols-2 gap-6 not-prose mt-8">
           <Link
