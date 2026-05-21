@@ -14,6 +14,34 @@ const posts = [
       'Discover the most profitable YouTube niches for creators.',
     href: '/blog/highest-rpm-youtube-niches',
   },
+
+  {
+    title: 'Finance YouTube RPM',
+    description:
+      'Discover finance niche RPM averages on YouTube.',
+    href: '/blog/youtube-rpm-finance',
+  },
+
+  {
+    title: 'Business YouTube RPM',
+    description:
+      'Explore business niche RPM rates on YouTube.',
+    href: '/blog/youtube-rpm-business',
+  },
+
+  {
+    title: 'Gaming YouTube RPM',
+    description:
+      'Learn average RPM for gaming YouTube channels.',
+    href: '/blog/youtube-rpm-gaming',
+  },
+
+  {
+    title: 'Education YouTube RPM',
+    description:
+      'See estimated RPM rates for educational creators.',
+    href: '/blog/youtube-rpm-education',
+  },
 ];
 
 export const metadata = {
