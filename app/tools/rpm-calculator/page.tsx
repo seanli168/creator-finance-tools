@@ -2,32 +2,12 @@
 
 import { useState } from 'react';
 
-export default function RPMCalculator() {
-  const [revenue, setRevenue] = useState('');
+export default function RPMCalculatorPage() {
   const [views, setViews] = useState('');
-  const [rpm, setRPM] = useState<number | null>(null);
+  const [rpm, setRpm] = useState('');
 
-  function calculateRPM() {
-    const totalRevenue = parseFloat(revenue);
-    const totalViews = parseFloat(views);
-
-    if (!totalRevenue || !totalViews) {
-      return;
-    }
-
-    const calculatedRPM =
-      (totalRevenue / totalViews) * 1000;
-
-    setRPM(Number(calculatedRPM.toFixed(2)));
-  }
-
-  function getRPMLevel(rpm: number) {
-    if (rpm >= 15) return 'Excellent RPM';
-    if (rpm >= 8) return 'High RPM';
-    if (rpm >= 3) return 'Average RPM';
-
-    return 'Low RPM';
-  }
+  const earnings =
+    (Number(views) / 1000) * Number(rpm);
 
   return (
     <main className="max-w-4xl mx-auto px-6 py-16">
@@ -36,99 +16,70 @@ export default function RPMCalculator() {
       </h1>
 
       <p className="mt-6 text-xl text-gray-600">
-        Calculate YouTube RPM based on revenue and total
-        views.
+        Estimate your creator earnings based on RPM
+        and total views.
       </p>
 
-      <div className="mt-12 border rounded-2xl p-8">
-        <div className="space-y-6">
-          <div>
-            <label className="block font-semibold mb-2">
-              Revenue ($)
-            </label>
+      <div className="mt-12 space-y-8">
+        <div>
+          <label className="block text-lg font-medium">
+            Total Views
+          </label>
 
-            <input
-              type="number"
-              value={revenue}
-              onChange={(e) => setRevenue(e.target.value)}
-              placeholder="Enter total revenue"
-              className="w-full border rounded-xl px-4 py-3"
-            />
-          </div>
+          <input
+            type="number"
+            value={views}
+            onChange={(e) =>
+              setViews(e.target.value)
+            }
+            placeholder="Enter views"
+            className="w-full mt-3 border rounded-xl px-4 py-4 text-lg"
+          />
+        </div>
 
-          <div>
-            <label className="block font-semibold mb-2">
-              Total Views
-            </label>
+        <div>
+          <label className="block text-lg font-medium">
+            RPM ($)
+          </label>
 
-            <input
-              type="number"
-              value={views}
-              onChange={(e) => setViews(e.target.value)}
-              placeholder="Enter total views"
-              className="w-full border rounded-xl px-4 py-3"
-            />
-          </div>
-
-          <button
-            onClick={calculateRPM}
-            className="bg-black text-white px-6 py-3 rounded-xl"
-          >
-            Calculate RPM
-          </button>
-
-          {rpm !== null && (
-            <div className="mt-8 border rounded-2xl p-6">
-              <h2 className="text-3xl font-bold">
-                Estimated RPM
-              </h2>
-
-              <p className="mt-4 text-5xl font-bold">
-                ${rpm}
-              </p>
-
-              <p className="mt-4 text-xl text-gray-600">
-                {getRPMLevel(rpm)}
-              </p>
-            </div>
-          )}
+          <input
+            type="number"
+            value={rpm}
+            onChange={(e) =>
+              setRpm(e.target.value)
+            }
+            placeholder="Enter RPM"
+            className="w-full mt-3 border rounded-xl px-4 py-4 text-lg"
+          />
         </div>
       </div>
 
-      <section className="mt-20 prose prose-lg max-w-none">
-        <h2>What Is RPM?</h2>
+      <div className="mt-16 border rounded-2xl p-10">
+        <h2 className="text-3xl font-bold">
+          Estimated Earnings
+        </h2>
 
-        <p>
-          RPM stands for Revenue Per Mille, which measures
-          estimated earnings per 1,000 views after YouTube
-          takes its share.
+        <p className="mt-6 text-5xl font-bold">
+          ${isNaN(earnings) ? '0' : earnings.toFixed(2)}
+        </p>
+      </div>
+
+      <section className="mt-24">
+        <h2 className="text-3xl font-bold">
+          What Is RPM?
+        </h2>
+
+        <p className="mt-6 text-lg text-gray-700 leading-8">
+          RPM stands for Revenue Per Mille, which
+          measures how much creators earn per 1,000
+          views after platform fees.
         </p>
 
-        <h2>How RPM Is Calculated</h2>
-
-        <p>
-          RPM = (Revenue ÷ Total Views) × 1000
+        <p className="mt-6 text-lg text-gray-700 leading-8">
+          High RPM niches include finance, AI,
+          software, investing, insurance, and business
+          content.
         </p>
-
-        <h2>Factors Affecting RPM</h2>
-
-        <ul>
-          <li>Audience country</li>
-          <li>Video niche</li>
-          <li>Viewer age</li>
-          <li>Ad engagement</li>
-          <li>Seasonality</li>
-        </ul>
-
-        <h2>High RPM Niches</h2>
-
-        <ul>
-          <li>Finance</li>
-          <li>Business</li>
-          <li>Software</li>
-          <li>Marketing</li>
-          <li>Insurance</li>
-        </ul>
       </section>
     </main>
   );
