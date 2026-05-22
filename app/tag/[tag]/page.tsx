@@ -1,4 +1,4 @@
-export const dynamic = 'force-static';
+export const dynamicParams = false;
 
 import Link from 'next/link';
 import { blogPosts } from '@/app/data/blogData';
@@ -15,21 +15,19 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function TagPage({
+export default function TagPage({
   params,
 }: {
-  params: Promise<{ tag: string }>;
+  params: { tag: string };
 }) {
-  const { tag } = await params;
-
   const posts = blogPosts.filter((post) =>
-    post.tags.includes(tag)
+    post.tags.includes(params.tag)
   );
 
   return (
     <main className="max-w-6xl mx-auto px-6 py-16">
       <h1 className="text-5xl font-bold capitalize">
-        {tag} Creator RPM
+        {params.tag} Creator RPM
       </h1>
 
       <div className="grid md:grid-cols-3 gap-8 mt-16">

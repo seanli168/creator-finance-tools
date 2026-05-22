@@ -1,4 +1,4 @@
-export const dynamic = 'force-static';
+export const dynamicParams = false;
 
 import Link from 'next/link';
 import { blogPosts } from '@/app/data/blogData';
@@ -13,21 +13,19 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function CategoryPage({
+export default function CategoryPage({
   params,
 }: {
-  params: Promise<{ category: string }>;
+  params: { category: string };
 }) {
-  const { category } = await params;
-
   const posts = blogPosts.filter(
-    (post) => post.category === category
+    (post) => post.category === params.category
   );
 
   return (
     <main className="max-w-6xl mx-auto px-6 py-16">
       <h1 className="text-5xl font-bold capitalize">
-        {category} Creator RPM
+        {params.category} Creator RPM
       </h1>
 
       <div className="grid md:grid-cols-3 gap-8 mt-16">
