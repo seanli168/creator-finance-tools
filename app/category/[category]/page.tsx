@@ -1,6 +1,7 @@
 export const dynamicParams = false;
 
 import Link from 'next/link';
+import { Metadata } from 'next';
 import { blogPosts } from '@/app/data/blogData';
 
 export async function generateStaticParams() {
@@ -12,7 +13,16 @@ export async function generateStaticParams() {
     category,
   }));
 }
-
+export async function generateMetadata({
+  params,
+}: {
+  params: { category: string };
+}): Promise<Metadata> {
+  return {
+    title: `${params.category} Creator RPM (2026)`,
+    description: `Explore RPM rates and monetization strategies for ${params.category} creators.`,
+  };
+}
 export default function CategoryPage({
   params,
 }: {

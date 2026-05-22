@@ -1,5 +1,6 @@
-export const dynamic = 'force-static';
+export const dynamicParams = false;
 
+import { Metadata } from 'next';
 import { blogPosts } from '@/app/data/blogData';
 
 export async function generateStaticParams() {
@@ -8,15 +9,34 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function Page({
+export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
-}) {
-  const { slug } = await params;
-
+  params: { slug: string };
+}): Promise<Metadata> {
   const post = blogPosts.find(
-    (p) => p.slug === slug
+    (p) => p.slug === params.slug
+  );
+
+  if (!post) {
+    return {
+      title: 'Post Not Found',
+    };
+  }
+
+  return {
+    title: `${post.title} (2026 Guide)`,
+    description: post.description,
+  };
+}
+
+export default function BlogPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const post = blogPosts.find(
+    (p) => p.slug === params.slug
   );
 
   if (!post) {
@@ -34,8 +54,21 @@ export default async function Page({
       </p>
 
       <p className="mt-6 text-3xl font-bold">
-        {post.rpm}
+        Estimated RPM: {post.rpm}
       </p>
+
+      <section className="mt-16">
+        <h2 className="text-3xl font-bold">
+          Why Is RPM Different?
+        </h2>
+
+        <p className="mt-6 text-lg text-gray-700 leading-8">
+          RPM depends on audience location, advertiser demand,
+          and content niche. Finance, AI, investing, and
+          software niches usually have significantly higher RPM
+          than entertainment categories.
+        </p>
+      </section>
     </main>
   );
 }

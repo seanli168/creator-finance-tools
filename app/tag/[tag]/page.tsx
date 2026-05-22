@@ -1,6 +1,7 @@
 export const dynamicParams = false;
 
 import Link from 'next/link';
+import { Metadata } from 'next';
 import { blogPosts } from '@/app/data/blogData';
 
 export async function generateStaticParams() {
@@ -14,7 +15,16 @@ export async function generateStaticParams() {
     tag,
   }));
 }
-
+export async function generateMetadata({
+  params,
+}: {
+  params: { tag: string };
+}): Promise<Metadata> {
+  return {
+    title: `${params.tag} Creator RPM (2026)`,
+    description: `Explore RPM trends and monetization opportunities in the ${params.tag} niche.`,
+  };
+}
 export default function TagPage({
   params,
 }: {
