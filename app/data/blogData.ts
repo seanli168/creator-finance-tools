@@ -467,5 +467,154 @@ export const blogPosts = [
   description:
     'Personal finance creators attract banking and fintech brands.',
 },
+{
+  slug: 'youtube-rpm-saas',
+  title: 'SaaS YouTube RPM',
+  category: 'youtube',
+  tags: ['saas', 'youtube'],
+  rpm: '$15 - $40',
+  description:
+    'SaaS advertisers pay premium rates for software audiences.',
+},
+
+{
+  slug: 'youtube-rpm-coding',
+  title: 'Coding YouTube RPM',
+  category: 'youtube',
+  tags: ['coding', 'youtube'],
+  rpm: '$8 - $25',
+  description:
+    'Programming channels attract software and tech advertisers.',
+},
+
+{
+  slug: 'youtube-rpm-cybersecurity',
+  title: 'Cybersecurity YouTube RPM',
+  category: 'youtube',
+  tags: ['cybersecurity', 'youtube'],
+  rpm: '$12 - $35',
+  description:
+    'Cybersecurity content attracts enterprise advertisers.',
+},
+
+{
+  slug: 'youtube-rpm-health',
+  title: 'Health YouTube RPM',
+  category: 'youtube',
+  tags: ['health', 'youtube'],
+  rpm: '$6 - $18',
+  description:
+    'Health and wellness creators monetize through health brands.',
+},
+
+{
+  slug: 'youtube-rpm-lawyer',
+  title: 'Lawyer YouTube RPM',
+  category: 'youtube',
+  tags: ['lawyer', 'youtube'],
+  rpm: '$20 - $50',
+  description:
+    'Legal keywords are among the highest CPM categories online.',
+},
+
+{
+  slug: 'youtube-rpm-education',
+  title: 'Education YouTube RPM',
+  category: 'youtube',
+  tags: ['education', 'youtube'],
+  rpm: '$4 - $15',
+  description:
+    'Educational content performs well with long watch time.',
+},
+
+{
+  slug: 'youtube-rpm-motivation',
+  title: 'Motivation YouTube RPM',
+  category: 'youtube',
+  tags: ['motivation', 'youtube'],
+  rpm: '$3 - $10',
+  description:
+    'Motivational channels monetize with coaching and sponsorships.',
+},
+
+{
+  slug: 'youtube-rpm-productivity',
+  title: 'Productivity YouTube RPM',
+  category: 'youtube',
+  tags: ['productivity', 'youtube'],
+  rpm: '$8 - $22',
+  description:
+    'Productivity audiences attract software advertisers.',
+},
+
+{
+  slug: 'youtube-rpm-freelancing',
+  title: 'Freelancing YouTube RPM',
+  category: 'youtube',
+  tags: ['freelancing', 'youtube'],
+  rpm: '$7 - $20',
+  description:
+    'Freelancing creators monetize through tools and sponsors.',
+},
+
+{
+  slug: 'youtube-rpm-startups',
+  title: 'Startup YouTube RPM',
+  category: 'youtube',
+  tags: ['startups', 'youtube'],
+  rpm: '$10 - $30',
+  description:
+    'Startup audiences are valuable for SaaS advertisers.',
+},
+
+{
+  slug: 'youtube-rpm-dropshipping',
+  title: 'Dropshipping YouTube RPM',
+  category: 'youtube',
+  tags: ['dropshipping', 'youtube'],
+  rpm: '$8 - $25',
+  description:
+    'Dropshipping channels attract ecommerce sponsors.',
+},
+
+{
+  slug: 'youtube-rpm-ecommerce',
+  title: 'Ecommerce YouTube RPM',
+  category: 'youtube',
+  tags: ['ecommerce', 'youtube'],
+  rpm: '$10 - $28',
+  description:
+    'Ecommerce audiences convert well for advertisers.',
+},
+
+{
+  slug: 'youtube-rpm-affiliate-marketing',
+  title: 'Affiliate Marketing YouTube RPM',
+  category: 'youtube',
+  tags: ['affiliate-marketing', 'youtube'],
+  rpm: '$10 - $35',
+  description:
+    'Affiliate marketing audiences are highly valuable.',
+},
+
+{
+  slug: 'youtube-rpm-passive-income',
+  title: 'Passive Income YouTube RPM',
+  category: 'youtube',
+  tags: ['passive-income', 'youtube'],
+  rpm: '$10 - $30',
+  description:
+    'Passive income content attracts finance advertisers.',
+},
+
+{
+  slug: 'youtube-rpm-stock-market',
+  title: 'Stock Market YouTube RPM',
+  category: 'youtube',
+  tags: ['stock-market', 'youtube'],
+  rpm: '$15 - $45',
+  description:
+    'Stock market content has some of the highest RPM rates.',
+},
 ];
 
