@@ -1,4 +1,5 @@
 {/* Tools */}
+import Link from 'next/link';
 <section className="mt-28">
   <h2 className="text-4xl font-bold">
     Creator Tools
