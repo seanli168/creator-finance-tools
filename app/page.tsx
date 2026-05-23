@@ -61,6 +61,18 @@ export default function HomePage() {
     Calculate CPM based on ad spend and impressions.
   </p>
 </Link>
+<Link
+  href="/tools/youtube-money-calculator"
+  className="border rounded-2xl p-8 hover:border-black transition"
+>
+  <h3 className="text-2xl font-semibold">
+    YouTube Money Calculator
+  </h3>
+
+  <p className="mt-4 text-gray-600">
+    Estimate YouTube earnings using views and CPM.
+  </p>
+</Link>
         </div>
       </section>
 
