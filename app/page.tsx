@@ -94,6 +94,18 @@ export default function HomePage() {
     views.
   </p>
 </Link>
+<Link
+  href="/tools/instagram-earnings-calculator"
+  className="border rounded-2xl p-8 hover:border-black transition"
+>
+  <h3 className="text-2xl font-semibold">
+    Instagram Earnings Calculator
+  </h3>
+
+  <p className="mt-4 text-gray-600">
+    Estimate Instagram sponsorship earnings.
+  </p>
+</Link>
         </div>
       </section>
 

@@ -27,6 +27,12 @@ const tools = [
   description:
     'Estimate TikTok creator earnings and RPM.',
 },
+{
+  title: 'Instagram Earnings Calculator',
+  href: '/tools/instagram-earnings-calculator',
+  description:
+    'Estimate Instagram sponsorship earnings.',
+},
 ];
 
 export default function ToolsPage() {
