@@ -49,6 +49,18 @@ export default function HomePage() {
               views.
             </p>
           </Link>
+          <Link
+  href="/tools/cpm-calculator"
+  className="border rounded-2xl p-8 hover:border-black transition"
+>
+  <h3 className="text-2xl font-semibold">
+    CPM Calculator
+  </h3>
+
+  <p className="mt-4 text-gray-600">
+    Calculate CPM based on ad spend and impressions.
+  </p>
+</Link>
         </div>
       </section>
 
