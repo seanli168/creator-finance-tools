@@ -21,6 +21,12 @@ const tools = [
     description:
       'Estimate YouTube earnings using views and CPM.',
   },
+  {
+  title: 'TikTok Money Calculator',
+  href: '/tools/tiktok-money-calculator',
+  description:
+    'Estimate TikTok creator earnings and RPM.',
+},
 ];
 
 export default function ToolsPage() {

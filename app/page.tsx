@@ -81,6 +81,19 @@ export default function HomePage() {
     Estimate YouTube earnings using views and CPM.
   </p>
 </Link>
+<Link
+  href="/tools/tiktok-money-calculator"
+  className="border rounded-2xl p-8 hover:border-black transition"
+>
+  <h3 className="text-2xl font-semibold">
+    TikTok Money Calculator
+  </h3>
+
+  <p className="mt-4 text-gray-600">
+    Estimate TikTok creator earnings using RPM and
+    views.
+  </p>
+</Link>
         </div>
       </section>
 
