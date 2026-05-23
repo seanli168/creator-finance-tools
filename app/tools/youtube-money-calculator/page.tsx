@@ -1,13 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-export const metadata = {
-  title:
-    'YouTube Money Calculator - Creator Finance Tools',
 
-  description:
-    'Estimate YouTube earnings using CPM and total views.',
-};
 
 export default function YouTubeMoneyCalculatorPage() {
   const [views, setViews] = useState('');

@@ -1,12 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-export const metadata = {
-  title: 'CPM Calculator - Creator Finance Tools',
 
-  description:
-    'Calculate CPM using impressions and ad spend.',
-};
 
 export default function CPMCalculatorPage() {
   const [impressions, setImpressions] =
