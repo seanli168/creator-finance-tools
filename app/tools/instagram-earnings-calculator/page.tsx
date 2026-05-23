@@ -1,6 +1,13 @@
 'use client';
 
 import { useState } from 'react';
+export const metadata = {
+  title:
+    'Instagram Earnings Calculator - Creator Finance Tools',
+
+  description:
+    'Estimate Instagram sponsorship earnings.',
+};
 
 export default function InstagramEarningsCalculatorPage() {
   const [followers, setFollowers] =

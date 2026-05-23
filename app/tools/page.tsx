@@ -1,4 +1,11 @@
 import Link from 'next/link';
+export const metadata = {
+  title:
+    'Creator Tools - RPM, CPM & Earnings Calculators',
+
+  description:
+    'Free creator monetization tools including RPM calculator, CPM calculator, YouTube money calculator, TikTok earnings calculator, and more.',
+};
 
 const tools = [
   {
