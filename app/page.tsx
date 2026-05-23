@@ -27,6 +27,14 @@ export default function HomePage() {
           strategies across YouTube, TikTok, Instagram,
           and more.
         </p>
+        <div className="mt-10">
+  <Link
+    href="/tools"
+    className="inline-block border rounded-full px-8 py-4 text-lg hover:border-black transition"
+  >
+    Explore Creator Tools
+  </Link>
+</div>
       </section>
 
       {/* Tools */}
