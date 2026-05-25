@@ -40,6 +40,12 @@ const tools = [
   description:
     'Estimate Instagram sponsorship earnings.',
 },
+{
+  title: 'Engagement Rate Calculator',
+  href: '/tools/engagement-rate-calculator',
+  description:
+    'Calculate social media engagement rate.',
+},
 ];
 
 export default function ToolsPage() {

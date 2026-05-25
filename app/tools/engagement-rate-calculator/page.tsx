@@ -1,148 +1,94 @@
-'use client';
+import EngagementRateCalculator from './EngagementRateCalculator';
 
-import { useState } from 'react';
+export const metadata = {
+  title:
+    'Engagement Rate Calculator - Creator Finance Tools',
 
-export default function EngagementRateCalculator() {
-  const [followers, setFollowers] = useState('');
-  const [likes, setLikes] = useState('');
-  const [comments, setComments] = useState('');
-  const [rate, setRate] = useState<number | null>(null);
+  description:
+    'Calculate social media engagement rate using followers and interactions.',
 
-  function calculateRate() {
-    const followerCount = parseFloat(followers);
-    const totalLikes = parseFloat(likes);
-    const totalComments = parseFloat(comments);
+  keywords: [
+    'Engagement Rate Calculator',
+    'Instagram Engagement Calculator',
+    'TikTok Engagement Rate',
+    'Social Media Engagement',
+    'Influencer Engagement Rate',
+  ],
 
-    if (
-      !followerCount ||
-      !totalLikes ||
-      totalComments < 0
-    ) {
-      return;
-    }
+  openGraph: {
+    title:
+      'Engagement Rate Calculator - Creator Finance Tools',
 
-    const engagement =
-      ((totalLikes + totalComments) / followerCount) *
-      100;
+    description:
+      'Calculate social media engagement rate using followers and interactions.',
 
-    setRate(Number(engagement.toFixed(2)));
-  }
+    url:
+      'https://creator-finance-tools.vercel.app/tools/engagement-rate-calculator',
 
-  function getRating(rate: number) {
-    if (rate >= 6) return 'Excellent';
-    if (rate >= 3) return 'Good';
-    if (rate >= 1) return 'Average';
+    siteName: 'Creator Finance Tools',
 
-    return 'Low';
-  }
+    type: 'website',
+  },
+};
+
+export default function Page() {
+  const faqSchema = {
+    '@context': 'https://schema.org',
+
+    '@type': 'FAQPage',
+
+    mainEntity: [
+      {
+        '@type': 'Question',
+
+        name: 'What is engagement rate?',
+
+        acceptedAnswer: {
+          '@type': 'Answer',
+
+          text:
+            'Engagement rate measures how actively audiences interact with social media content.',
+        },
+      },
+
+      {
+        '@type': 'Question',
+
+        name: 'How do you calculate engagement rate?',
+
+        acceptedAnswer: {
+          '@type': 'Answer',
+
+          text:
+            'Engagement rate is calculated by dividing total interactions by followers and multiplying by 100.',
+        },
+      },
+
+      {
+        '@type': 'Question',
+
+        name: 'What is a good engagement rate?',
+
+        acceptedAnswer: {
+          '@type': 'Answer',
+
+          text:
+            'A good engagement rate depends on platform and niche, but 3% to 6% is often considered strong.',
+        },
+      },
+    ],
+  };
 
   return (
-    <main className="max-w-4xl mx-auto px-6 py-16">
-      <h1 className="text-5xl font-bold">
-        Engagement Rate Calculator
-      </h1>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema),
+        }}
+      />
 
-      <p className="mt-6 text-xl text-gray-600">
-        Calculate Instagram, TikTok, and YouTube engagement
-        rates instantly.
-      </p>
-
-      <div className="mt-12 border rounded-2xl p-8">
-        <div className="space-y-6">
-          <div>
-            <label className="block font-semibold mb-2">
-              Followers
-            </label>
-
-            <input
-              type="number"
-              value={followers}
-              onChange={(e) => setFollowers(e.target.value)}
-              placeholder="Enter followers"
-              className="w-full border rounded-xl px-4 py-3"
-            />
-          </div>
-
-          <div>
-            <label className="block font-semibold mb-2">
-              Likes
-            </label>
-
-            <input
-              type="number"
-              value={likes}
-              onChange={(e) => setLikes(e.target.value)}
-              placeholder="Enter likes"
-              className="w-full border rounded-xl px-4 py-3"
-            />
-          </div>
-
-          <div>
-            <label className="block font-semibold mb-2">
-              Comments
-            </label>
-
-            <input
-              type="number"
-              value={comments}
-              onChange={(e) => setComments(e.target.value)}
-              placeholder="Enter comments"
-              className="w-full border rounded-xl px-4 py-3"
-            />
-          </div>
-
-          <button
-            onClick={calculateRate}
-            className="bg-black text-white px-6 py-3 rounded-xl"
-          >
-            Calculate Engagement Rate
-          </button>
-
-          {rate !== null && (
-            <div className="mt-8 border rounded-2xl p-6">
-              <h2 className="text-3xl font-bold">
-                Engagement Rate
-              </h2>
-
-              <p className="mt-4 text-5xl font-bold">
-                {rate}%
-              </p>
-
-              <p className="mt-4 text-xl text-gray-600">
-                Rating: {getRating(rate)}
-              </p>
-            </div>
-          )}
-        </div>
-      </div>
-
-      <section className="mt-20 prose prose-lg max-w-none">
-        <h2>What Is Engagement Rate?</h2>
-
-        <p>
-          Engagement rate measures how actively an audience
-          interacts with social media content through likes,
-          comments, shares, and saves.
-        </p>
-
-        <h2>Average Engagement Rates</h2>
-
-        <ul>
-          <li>Excellent: 6%+</li>
-          <li>Good: 3% - 6%</li>
-          <li>Average: 1% - 3%</li>
-          <li>Low: Below 1%</li>
-        </ul>
-
-        <h2>Why Engagement Matters</h2>
-
-        <ul>
-          <li>Higher sponsorship rates</li>
-          <li>Better algorithm reach</li>
-          <li>More loyal audience</li>
-          <li>Increased monetization potential</li>
-        </ul>
-      </section>
-    </main>
+      <EngagementRateCalculator />
+    </>
   );
 }
