@@ -3,7 +3,6 @@ import Link from 'next/link';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Creator Finance Tools',
   description:
     'Free creator economy calculators and monetization tools.',
 };
