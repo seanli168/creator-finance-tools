@@ -3,10 +3,14 @@ import Link from 'next/link';
 import './globals.css';
 
 export const metadata: Metadata = {
+  title: {
+    default: 'Creator Finance Tools',
+    template: '%s',
+  },
+
   description:
     'Free creator economy calculators and monetization tools.',
 };
-
 export default function RootLayout({
   children,
 }: Readonly<{
