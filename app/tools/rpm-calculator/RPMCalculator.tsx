@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+
 import RelatedTools from '@/components/RelatedTools';
 
 export default function RPMCalculator() {
@@ -17,8 +18,8 @@ export default function RPMCalculator() {
       </h1>
 
       <p className="mt-6 text-xl text-gray-600">
-        Estimate your creator earnings based on RPM
-        and total views.
+        Estimate creator earnings based on RPM and
+        total views.
       </p>
 
       <div className="mt-12 space-y-8">
@@ -61,92 +62,108 @@ export default function RPMCalculator() {
         </h2>
 
         <p className="mt-6 text-5xl font-bold">
-          ${isNaN(earnings) ? '0' : earnings.toFixed(2)}
+          $
+          {isNaN(earnings)
+            ? '0'
+            : earnings.toFixed(2)}
         </p>
       </div>
-        <section className="mt-24 prose prose-lg max-w-none">
-  <h2>What Is RPM?</h2>
 
-  <p>
-    RPM stands for Revenue Per Mille, which means
-    revenue earned per 1,000 views. Creators use RPM
-    to estimate total earnings from YouTube, TikTok,
-    blogs, and other monetized platforms.
-  </p>
+      <section className="mt-24 prose prose-lg max-w-none">
+        <h2>What Is RPM?</h2>
 
-  <p>
-    RPM includes ad revenue, memberships,
-    sponsorships, and other monetization sources.
-    Unlike CPM, RPM reflects the creator’s actual
-    earnings after platform fees.
-  </p>
+        <p>
+          RPM stands for Revenue Per Mille, which
+          means revenue earned per 1,000 views.
+          Creators use RPM to estimate total
+          earnings from YouTube, TikTok, blogs, and
+          other monetized platforms.
+        </p>
 
-  <h2>How To Calculate RPM</h2>
+        <p>
+          RPM includes ad revenue, memberships,
+          sponsorships, and other monetization
+          sources. Unlike CPM, RPM reflects the
+          creator’s actual earnings after platform
+          fees.
+        </p>
 
-  <p>
-    RPM is calculated using the following formula:
-  </p>
+        <h2>How To Calculate RPM</h2>
 
-  :contentReference[oaicite:0]{index=0}
+        <p>
+          RPM is calculated using the following
+          formula:
+        </p>
 
-  <p>
-    For example, if you earned $500 from 100,000
-    views:
-  </p>
+        <div className="bg-gray-100 rounded-xl p-6 my-6 overflow-x-auto">
+          <code className="text-lg">
+            RPM = (Revenue / Views) × 1000
+          </code>
+        </div>
 
-  :contentReference[oaicite:1]{index=1}
+        <p>
+          For example, if you earned $500 from
+          100,000 views:
+        </p>
 
-  <p>
-    Your RPM would be $5.
-  </p>
+        <div className="bg-gray-100 rounded-xl p-6 my-6 overflow-x-auto">
+          <code className="text-lg">
+            RPM = (500 / 100000) × 1000 = 5
+          </code>
+        </div>
 
-  <h2>What Is A Good RPM?</h2>
+        <p>Your RPM would be $5.</p>
 
-  <p>
-    A good RPM depends on your niche, audience
-    country, and monetization methods.
-  </p>
+        <h2>What Is A Good RPM?</h2>
 
-  <ul>
-    <li>Gaming: $1 - $4 RPM</li>
-    <li>Finance: $10 - $40 RPM</li>
-    <li>Business: $8 - $25 RPM</li>
-    <li>Technology: $4 - $15 RPM</li>
-  </ul>
+        <p>
+          A good RPM depends on your niche,
+          audience country, and monetization
+          methods.
+        </p>
 
-  <h2>RPM vs CPM</h2>
+        <ul>
+          <li>Gaming: $1 - $4 RPM</li>
+          <li>Finance: $10 - $40 RPM</li>
+          <li>Business: $8 - $25 RPM</li>
+          <li>Technology: $4 - $15 RPM</li>
+        </ul>
 
-  <p>
-    CPM measures advertiser cost per 1,000
-    impressions, while RPM measures creator earnings
-    per 1,000 views after platform deductions.
-  </p>
+        <h2>RPM vs CPM</h2>
 
-  <h2>FAQ</h2>
+        <p>
+          CPM measures advertiser cost per 1,000
+          impressions, while RPM measures creator
+          earnings per 1,000 views after platform
+          deductions.
+        </p>
 
-  <h3>What does RPM mean on YouTube?</h3>
+        <h2>FAQ</h2>
 
-  <p>
-    YouTube RPM represents how much money creators
-    earn per 1,000 video views after YouTube’s
-    revenue share.
-  </p>
+        <h3>What does RPM mean on YouTube?</h3>
 
-  <h3>Is RPM higher than CPM?</h3>
+        <p>
+          YouTube RPM represents how much money
+          creators earn per 1,000 video views after
+          YouTube’s revenue share.
+        </p>
 
-  <p>
-    RPM is usually lower than CPM because platforms
-    keep a percentage of ad revenue.
-  </p>
+        <h3>Is RPM higher than CPM?</h3>
 
-  <h3>Why is my RPM low?</h3>
+        <p>
+          RPM is usually lower than CPM because
+          platforms keep a percentage of ad revenue.
+        </p>
 
-  <p>
-    RPM can be affected by audience location,
-    niche, ad blockers, watch time, and advertiser
-    demand.
-  </p>
-</section>
+        <h3>Why is my RPM low?</h3>
+
+        <p>
+          RPM can be affected by audience location,
+          niche, ad blockers, watch time, and
+          advertiser demand.
+        </p>
+      </section>
+
       <RelatedTools />
     </main>
   );
