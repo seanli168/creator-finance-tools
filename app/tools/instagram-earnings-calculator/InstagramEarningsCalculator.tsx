@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import RelatedTools from '@/components/RelatedTools';
 
 export default function InstagramEarningsCalculator() {
   const [followers, setFollowers] =
@@ -50,6 +51,7 @@ export default function InstagramEarningsCalculator() {
             : estimatedRate.toFixed(2)}
         </p>
       </div>
+      <RelatedTools />
     </main>
   );
 }

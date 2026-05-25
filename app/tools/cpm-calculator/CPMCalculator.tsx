@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import RelatedTools from '@/components/RelatedTools';
 
 export default function CPMCalculator() {
   const [impressions, setImpressions] =
@@ -52,6 +53,7 @@ export default function CPMCalculator() {
             : cpm.toFixed(2)}
         </p>
       </div>
+      <RelatedTools />
     </main>
   );
 }

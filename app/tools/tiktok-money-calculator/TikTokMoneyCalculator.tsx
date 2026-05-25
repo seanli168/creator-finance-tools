@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import RelatedTools from '@/components/RelatedTools';
 
 export default function TikTokMoneyCalculator() {
   const [views, setViews] = useState('');
@@ -45,6 +46,7 @@ export default function TikTokMoneyCalculator() {
             : earnings.toFixed(2)}
         </p>
       </div>
+      <RelatedTools />
     </main>
   );
 }

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import RelatedTools from '@/components/RelatedTools';
 
 export default function RPMCalculator() {
   const [views, setViews] = useState('');
@@ -63,6 +64,7 @@ export default function RPMCalculator() {
           ${isNaN(earnings) ? '0' : earnings.toFixed(2)}
         </p>
       </div>
+      <RelatedTools />
     </main>
   );
 }
