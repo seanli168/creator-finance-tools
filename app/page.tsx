@@ -106,6 +106,18 @@ export default function HomePage() {
     Estimate Instagram sponsorship earnings.
   </p>
 </Link>
+<Link
+  href="/tools/engagement-rate-calculator"
+  className="border rounded-2xl p-8 hover:border-black transition"
+>
+  <h3 className="text-2xl font-semibold">
+    Engagement Rate Calculator
+  </h3>
+
+  <p className="mt-4 text-gray-600">
+    Calculate social media engagement rate.
+  </p>
+</Link>
         </div>
       </section>
 
