@@ -142,6 +142,6 @@ These factors can dramatically improve long-term monetization and channel profit
 
 Try our free tools:
 
-<a href="/tools/rpm-calculator">RPM Calculator</a>
+[RPM Calculator](/tools/rpm-calculator)
 
-<a href="/blog/rpm-vs-cpm">RPM vs CPM</a>
+[RPM vs CPM](/blog/rpm-vs-cpm)

@@ -68,4 +68,4 @@ US audiences also increase RPM significantly.
 
 Try our free tools:
 
-<a href="/tools/rpm-calculator">RPM Calculator</a>
+[RPM Calculator](/tools/rpm-calculator)

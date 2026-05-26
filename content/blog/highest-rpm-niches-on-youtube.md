@@ -47,4 +47,4 @@ Creators should focus on:
 
 Try our free tools:
 
-<a href="/tools/rpm-calculator">RPM Calculator</a>
+[RPM Calculator](/tools/rpm-calculator)
