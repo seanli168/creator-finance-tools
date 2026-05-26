@@ -936,5 +936,13 @@ export const blogPosts = [
   rpm: '$12 - $38',
   description: 'Crypto Twitch content monetizes via fintech campaigns.',
 },
+{
+  slug: 'rpm-vs-cpm',
+  title: "RPM vs CPM: What's The Difference?",
+  description:
+    'Learn the difference between RPM and CPM.',
+  category: 'youtube',
+  date: '2026-05-26',
+},
 ];
 

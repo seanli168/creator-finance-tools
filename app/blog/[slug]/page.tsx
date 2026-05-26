@@ -1,10 +1,14 @@
-export const dynamicParams = false;
-
 import { Metadata } from 'next';
-import { blogPosts } from '@/app/data/blogData';
+
+import {
+  getAllPosts,
+  getPostBySlug,
+} from '@/lib/posts';
 
 export async function generateStaticParams() {
-  return blogPosts.map((post) => ({
+  const posts = getAllPosts();
+
+  return posts.map((post) => ({
     slug: post.slug,
   }));
 }
@@ -16,18 +20,11 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params;
 
-  const post = blogPosts.find(
-    (p) => p.slug === slug
-  );
-
-  if (!post) {
-    return {
-      title: 'Post Not Found',
-    };
-  }
+  const post = await getPostBySlug(slug);
 
   return {
-    title: `${post.title} (2026 Guide)`,
+    title: post.title,
+
     description: post.description,
   };
 }
@@ -39,13 +36,7 @@ export default async function BlogPage({
 }) {
   const { slug } = await params;
 
-  const post = blogPosts.find(
-    (p) => p.slug === slug
-  );
-
-  if (!post) {
-    return <div>Post not found</div>;
-  }
+  const post = await getPostBySlug(slug);
 
   return (
     <main className="max-w-4xl mx-auto px-6 py-16">
@@ -53,13 +44,12 @@ export default async function BlogPage({
         {post.title}
       </h1>
 
-      <p className="mt-8 text-xl text-gray-600">
-        {post.description}
-      </p>
-
-      <p className="mt-6 text-3xl font-bold">
-        Estimated RPM: {post.rpm}
-      </p>
+      <div
+  className="prose prose-lg max-w-none mt-12"
+  dangerouslySetInnerHTML={{
+    __html: post.contentHtml,
+  }}
+/>
     </main>
   );
 }
