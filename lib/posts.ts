@@ -18,7 +18,12 @@ export function getAllPosts() {
   const fileNames =
     fs.readdirSync(postsDirectory);
 
-  const allPosts = fileNames.map((fileName) => {
+    const filteredFileNames = fileNames.filter(
+  (fileName) =>
+    !fileName.startsWith('_')
+);
+
+  const allPosts = filteredFileNames.map((fileName) => {
     const slug = fileName.replace(/\.md$/, '');
 
     const fullPath = path.join(
