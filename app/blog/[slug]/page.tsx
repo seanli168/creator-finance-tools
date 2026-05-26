@@ -45,7 +45,7 @@ export default async function BlogPage({
       </h1>
 
       <div
-  className="prose prose-lg max-w-none mt-12"
+  className="prose prose-lg max-w-none mt-12 prose-a:text-blue-600 prose-a:underline"
   dangerouslySetInnerHTML={{
     __html: post.contentHtml,
   }}
