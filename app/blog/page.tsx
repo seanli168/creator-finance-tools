@@ -1,7 +1,10 @@
 import Link from 'next/link';
-import { blogPosts } from '@/app/data/blogData';
+
+import { getAllPosts } from '@/lib/posts';
 
 export default function BlogPage() {
+  const posts = getAllPosts();
+
   return (
     <main className="max-w-6xl mx-auto px-6 py-16">
       <h1 className="text-5xl font-bold">
@@ -9,7 +12,7 @@ export default function BlogPage() {
       </h1>
 
       <div className="grid md:grid-cols-3 gap-8 mt-16">
-        {blogPosts.map((post) => (
+        {posts.map((post) => (
           <Link
             key={post.slug}
             href={`/blog/${post.slug}`}
@@ -23,8 +26,8 @@ export default function BlogPage() {
               {post.description}
             </p>
 
-            <p className="mt-6 text-2xl font-bold">
-              {post.rpm}
+            <p className="mt-6 text-sm text-gray-500">
+              {post.date}
             </p>
           </Link>
         ))}
