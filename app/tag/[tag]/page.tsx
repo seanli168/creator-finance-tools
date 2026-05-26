@@ -36,9 +36,10 @@ export default async function TagPage({
 }) {
   const { tag } = await params;
 
-  const posts = blogPosts.filter((post) =>
-    post.tags.includes(tag)
-  );
+ const posts = blogPosts.filter(
+  (post) =>
+    post.tags?.includes(tag)
+);
 
   return (
     <main className="max-w-6xl mx-auto px-6 py-16">
