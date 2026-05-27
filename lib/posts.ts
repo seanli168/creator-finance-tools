@@ -18,39 +18,48 @@ export function getAllPosts() {
   const fileNames =
     fs.readdirSync(postsDirectory);
 
-    const filteredFileNames = fileNames.filter(
-  (fileName) =>
-    !fileName.startsWith('_')
-);
-
-  const allPosts = filteredFileNames.map((fileName) => {
-    const slug = fileName.replace(/\.md$/, '');
-
-    const fullPath = path.join(
-      postsDirectory,
-      fileName
+  const filteredFileNames =
+    fileNames.filter(
+      (fileName) =>
+        !fileName.startsWith('_')
     );
 
-    const fileContents = fs.readFileSync(
-      fullPath,
-      'utf8'
-    );
+  const allPosts =
+    filteredFileNames.map((fileName) => {
+      const slug = fileName.replace(
+        /\.md$/,
+        ''
+      );
 
-    const matterResult =
-      matter(fileContents);
+      const fullPath = path.join(
+        postsDirectory,
+        fileName
+      );
 
-    return {
-      slug,
+      const fileContents =
+        fs.readFileSync(
+          fullPath,
+          'utf8'
+        );
 
-      ...(matterResult.data as {
-        title: string;
-        date: string;
-        description: string;
-      }),
-    };
-  });
+      const matterResult =
+        matter(fileContents);
 
-  return allPosts;
+      return {
+        slug,
+
+        ...(matterResult.data as {
+          title: string;
+          date: string;
+          description: string;
+        }),
+      };
+    });
+
+  return allPosts.sort((a, b) =>
+    new Date(b.date).getTime() -
+    new Date(a.date).getTime()
+  );
 }
 
 export async function getPostBySlug(
@@ -61,17 +70,19 @@ export async function getPostBySlug(
     `${slug}.md`
   );
 
-  const fileContents = fs.readFileSync(
-    fullPath,
-    'utf8'
-  );
+  const fileContents =
+    fs.readFileSync(
+      fullPath,
+      'utf8'
+    );
 
   const matterResult =
     matter(fileContents);
 
-  const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content);
+  const processedContent =
+    await remark()
+      .use(html)
+      .process(matterResult.content);
 
   const contentHtml =
     processedContent.toString();
