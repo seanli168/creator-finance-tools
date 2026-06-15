@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
 
 import {
   getAllPosts,
@@ -16,15 +17,19 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 }): Promise<Metadata> {
-  const { slug } = await params;
+  const post = await getPostBySlug(params.slug);
 
-  const post = await getPostBySlug(slug);
+  if (!post) {
+    return {
+      title: 'Post Not Found',
+      description: 'This blog post does not exist.',
+    };
+  }
 
   return {
     title: post.title,
-
     description: post.description,
   };
 }
@@ -32,11 +37,13 @@ export async function generateMetadata({
 export default async function BlogPage({
   params,
 }: {
-  params: Promise<{ slug: string }>;
+  params: { slug: string };
 }) {
-  const { slug } = await params;
+  const post = await getPostBySlug(params.slug);
 
-  const post = await getPostBySlug(slug);
+  if (!post) {
+    notFound();
+  }
 
   return (
     <main className="max-w-4xl mx-auto px-6 py-16">
@@ -45,11 +52,11 @@ export default async function BlogPage({
       </h1>
 
       <div
-  className="prose prose-lg max-w-none mt-12 prose-a:text-blue-600 prose-a:underline"
-  dangerouslySetInnerHTML={{
-    __html: post.contentHtml,
-  }}
-/>
+        className="prose prose-lg max-w-none mt-12 prose-a:text-blue-600 prose-a:underline"
+        dangerouslySetInnerHTML={{
+          __html: post.contentHtml,
+        }}
+      />
     </main>
   );
 }
