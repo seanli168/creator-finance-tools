@@ -2,10 +2,10 @@ import Link from 'next/link';
 
 export const metadata = {
   title:
-    'Creator Tools - RPM, CPM & Earnings Calculators',
+    'Creator Finance Tools - RPM, CPM & Earnings Calculators',
 
   description:
-    'Free creator monetization tools including RPM calculators, CPM calculators, YouTube earnings calculators, TikTok revenue calculators, and more.',
+    'Free creator finance tools for YouTube, TikTok, Instagram, RPM, CPM, and earnings estimation. Calculate creator revenue instantly.',
 };
 
 const coreTools = [
@@ -43,7 +43,7 @@ const coreTools = [
     title: 'Creator Earnings Calculator',
     href: '/tools/creator-earnings-calculator',
     description:
-      'Estimate creator revenue across YouTube, TikTok, blogs, and more.',
+      'Estimate creator revenue across platforms.',
   },
 ];
 
@@ -62,23 +62,44 @@ const secondaryTools = [
   },
 ];
 
-export default function ToolsPage() {
+const latestPosts = [
+  {
+    title: 'How Much Does TikTok Pay Per 1000 Views?',
+    href: '/blog/how-much-does-tiktok-pay',
+  },
+  {
+    title: 'YouTube RPM vs CPM Explained',
+    href: '/blog/rpm-vs-cpm',
+  },
+  {
+    title: 'How Creators Make Passive Income Online',
+    href: '/blog/how-creators-make-passive-income',
+  },
+];
+
+export default function HomePage() {
   return (
     <main className="max-w-6xl mx-auto px-6 py-16">
 
       {/* HERO */}
-      <h1 className="text-6xl font-bold">
-        Creator Finance Tools
-      </h1>
+      <section>
+        <h1 className="text-6xl font-bold">
+          Creator Finance Tools
+        </h1>
 
-      <p className="mt-6 text-2xl text-gray-600 max-w-3xl">
-        Free RPM, CPM, YouTube, TikTok, and creator
-        earnings calculators to estimate online revenue
-        from content and social media.
-      </p>
+        <p className="mt-6 text-2xl text-gray-600 max-w-3xl">
+          Free tools to calculate RPM, CPM, YouTube earnings,
+          TikTok revenue, and creator monetization insights.
+        </p>
+
+        <div className="mt-8 text-gray-700 text-lg max-w-3xl">
+          Understand how much creators earn and optimize
+          your content strategy with real monetization data.
+        </div>
+      </section>
 
       {/* CORE TOOLS */}
-      <section className="mt-16">
+      <section className="mt-20">
         <h2 className="text-3xl font-bold mb-8">
           Core Monetization Tools
         </h2>
@@ -127,6 +148,25 @@ export default function ToolsPage() {
         </div>
       </section>
 
+      {/* LATEST BLOG POSTS */}
+      <section className="mt-24 max-w-4xl">
+        <h2 className="text-4xl font-bold">
+          Latest Creator Insights
+        </h2>
+
+        <div className="mt-8 space-y-6">
+          {latestPosts.map((post) => (
+            <Link
+              key={post.href}
+              href={post.href}
+              className="block text-xl text-blue-600 hover:underline"
+            >
+              {post.title}
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* SEO CONTENT */}
       <section className="mt-24 max-w-4xl">
         <h2 className="text-4xl font-bold">
@@ -134,25 +174,24 @@ export default function ToolsPage() {
         </h2>
 
         <p className="mt-8 text-lg text-gray-700 leading-8">
-          Creator finance tools help YouTubers,
-          TikTok creators, influencers, and publishers
-          estimate their earnings from RPM, CPM, and
-          advertising revenue.
+          Creator finance tools help YouTubers, TikTok
+          creators, influencers, and publishers estimate
+          their earnings using RPM and CPM metrics.
         </p>
 
         <p className="mt-6 text-lg text-gray-700 leading-8">
-          These calculators are widely used to
-          understand monetization performance,
-          compare platforms, and optimize content
-          strategy.
+          These tools are widely used to analyze content
+          monetization performance and improve revenue
+          strategies.
         </p>
 
         <p className="mt-6 text-lg text-gray-700 leading-8">
-          RPM (Revenue Per Mille) and CPM (Cost Per
-          Mille) are key metrics in digital content
+          RPM (Revenue Per Mille) and CPM (Cost Per Mille)
+          are key metrics in digital advertising and creator
           monetization.
         </p>
       </section>
+
     </main>
   );
 }
