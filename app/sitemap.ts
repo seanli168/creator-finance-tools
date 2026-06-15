@@ -46,5 +46,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
 
     ...blogUrls,
+
+    {
+  url: `${baseUrl}/tools/tiktok-money-calculator`,
+  lastModified: new Date(),
+},
+
+{
+  url: `${baseUrl}/tools/cpm-calculator`,
+  lastModified: new Date(),
+},
   ];
 }
