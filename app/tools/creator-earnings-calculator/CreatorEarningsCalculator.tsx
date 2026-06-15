@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 import RelatedTools from '@/components/RelatedTools';
 
-export default function TikTokMoneyCalculator() {
+export default function CreatorEarningsCalculator() {
   const [views, setViews] = useState('');
   const [rpm, setRpm] = useState('');
 
@@ -14,11 +14,12 @@ export default function TikTokMoneyCalculator() {
   return (
     <main className="max-w-4xl mx-auto px-6 py-16">
       <h1 className="text-5xl font-bold">
-        TikTok Money Calculator
+        Creator Earnings Calculator
       </h1>
 
       <p className="mt-6 text-xl text-gray-600">
-        Estimate TikTok earnings based on views and RPM.
+        Estimate earnings for content creators using
+        RPM and total views.
       </p>
 
       <div className="mt-12 space-y-8">
@@ -70,26 +71,27 @@ export default function TikTokMoneyCalculator() {
 
       <section className="mt-24 prose prose-lg max-w-none">
         <h2>
-          How Much Does TikTok Pay?
+          What Is A Creator Earnings Calculator?
         </h2>
 
         <p>
-          TikTok earnings depend on RPM, audience
-          location, niche, and monetization program.
+          A creator earnings calculator helps
+          estimate how much money content creators
+          can earn from views and RPM.
         </p>
 
         <p>
-          Creators can use this calculator to
-          estimate revenue based on total views and
-          RPM.
+          This can be useful for YouTubers, TikTok
+          creators, bloggers, publishers, and
+          influencers.
         </p>
 
         <h2>
-          How To Calculate TikTok Earnings
+          How To Calculate Creator Earnings
         </h2>
 
         <p>
-          The formula is:
+          Earnings are estimated using RPM:
         </p>
 
         <div className="bg-gray-100 rounded-xl p-6 my-6 overflow-x-auto">
@@ -104,69 +106,70 @@ export default function TikTokMoneyCalculator() {
 
         <div className="bg-gray-100 rounded-xl p-6 my-6 overflow-x-auto">
           <code className="text-lg">
-            Earnings = (100000 ÷ 1000) × 5 = 500
+            Earnings = (500000 ÷ 1000) × 8 = 4000
           </code>
         </div>
 
         <p>
-          In this example, 100,000 views would
-          generate approximately $500 with a $5 RPM.
+          In this example, 500,000 views at an $8
+          RPM would generate approximately $4,000.
         </p>
 
         <h2>
-          Factors That Affect TikTok Earnings
+          Average RPM By Creator Type
         </h2>
 
         <ul>
-          <li>Audience location</li>
-          <li>Content category</li>
-          <li>Creator Rewards eligibility</li>
-          <li>Advertiser demand</li>
-          <li>Watch time and engagement</li>
+          <li>YouTube Gaming: $1 - $4</li>
+          <li>YouTube Tech: $4 - $15</li>
+          <li>YouTube Finance: $10 - $40</li>
+          <li>TikTok Business: $2 - $12</li>
+          <li>Blogs & Publishers: $5 - $30</li>
         </ul>
 
         <h2>
-          Average TikTok RPM By Niche
+          Why RPM Matters
         </h2>
 
-        <ul>
-          <li>Entertainment: $0.20 - $2</li>
-          <li>Gaming: $0.50 - $3</li>
-          <li>Technology: $2 - $10</li>
-          <li>Business: $3 - $12</li>
-          <li>Finance: $5 - $20+</li>
-        </ul>
+        <p>
+          RPM provides a simple way to compare
+          performance across different content
+          platforms.
+        </p>
+
+        <p>
+          Higher RPM generally means your audience
+          is more valuable to advertisers.
+        </p>
 
         <h2>FAQ</h2>
 
         <h3>
-          How much does TikTok pay per 1000 views?
+          Can I use this for YouTube earnings?
         </h3>
 
         <p>
-          It varies widely depending on audience and
-          monetization program. RPM can range from
-          less than $1 to over $10.
+          Yes. The calculator works for YouTube,
+          TikTok, blogs, and most creator platforms.
         </p>
 
         <h3>
-          Is TikTok RPM fixed?
+          What is a good RPM?
         </h3>
 
         <p>
-          No. RPM changes based on niche, country,
-          advertiser demand, and seasonality.
+          A good RPM depends on your niche. Finance
+          and business content often have higher RPM
+          than entertainment content.
         </p>
 
         <h3>
-          Can TikTok creators earn more than ad
-          revenue?
+          Is this an exact earnings estimate?
         </h3>
 
         <p>
-          Yes. Many creators earn through
-          sponsorships, affiliate marketing, digital
-          products, and brand partnerships.
+          No. It is an estimate based on RPM and
+          views. Actual earnings may vary.
         </p>
       </section>
 
