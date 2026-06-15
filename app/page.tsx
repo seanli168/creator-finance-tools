@@ -1,224 +1,156 @@
 import Link from 'next/link';
-import { blogPosts } from '@/app/data/blogData';
 
-export default function HomePage() {
-  const featuredPosts = blogPosts.slice(0, 9);
+export const metadata = {
+  title:
+    'Creator Tools - RPM, CPM & Earnings Calculators',
 
-  const categories = [
-    ...new Set(blogPosts.map((post) => post.category)),
-  ];
+  description:
+    'Free creator monetization tools including RPM calculators, CPM calculators, YouTube earnings calculators, TikTok revenue calculators, and more.',
+};
 
-  const tags = [
-    ...new Set(
-      blogPosts.flatMap((post) => post.tags)
-    ),
-  ].slice(0, 12);
+const coreTools = [
+  {
+    title: 'RPM Calculator',
+    href: '/tools/rpm-calculator',
+    description:
+      'Calculate RPM using revenue and views.',
+  },
+  {
+    title: 'CPM Calculator',
+    href: '/tools/cpm-calculator',
+    description:
+      'Calculate CPM based on ad spend and impressions.',
+  },
+  {
+    title: 'YouTube Money Calculator',
+    href: '/tools/youtube-money-calculator',
+    description:
+      'Estimate YouTube earnings using views and CPM.',
+  },
+  {
+    title: 'TikTok RPM Calculator',
+    href: '/tools/tiktok-rpm-calculator',
+    description:
+      'Calculate TikTok RPM from views and revenue.',
+  },
+  {
+    title: 'TikTok Money Calculator',
+    href: '/tools/tiktok-money-calculator',
+    description:
+      'Estimate TikTok creator earnings and RPM.',
+  },
+  {
+    title: 'Creator Earnings Calculator',
+    href: '/tools/creator-earnings-calculator',
+    description:
+      'Estimate creator revenue across YouTube, TikTok, blogs, and more.',
+  },
+];
 
+const secondaryTools = [
+  {
+    title: 'Instagram Earnings Calculator',
+    href: '/tools/instagram-earnings-calculator',
+    description:
+      'Estimate Instagram sponsorship earnings.',
+  },
+  {
+    title: 'Engagement Rate Calculator',
+    href: '/tools/engagement-rate-calculator',
+    description:
+      'Calculate social media engagement rate.',
+  },
+];
+
+export default function ToolsPage() {
   return (
-    <main className="max-w-7xl mx-auto px-6 py-16">
-      {/* Hero */}
-      <section className="text-center">
-        <h1 className="text-6xl font-bold leading-tight">
-          Creator RPM Database
-        </h1>
+    <main className="max-w-6xl mx-auto px-6 py-16">
 
-        <p className="mt-8 text-2xl text-gray-600 max-w-3xl mx-auto">
-          Discover RPM rates, CPM trends, and monetization
-          strategies across YouTube, TikTok, Instagram,
-          and more.
-        </p>
-        <div className="mt-10">
-  <Link
-    href="/tools"
-    className="inline-block border rounded-full px-8 py-4 text-lg hover:border-black transition"
-  >
-    Explore Creator Tools
-  </Link>
-</div>
-      </section>
+      {/* HERO */}
+      <h1 className="text-6xl font-bold">
+        Creator Finance Tools
+      </h1>
 
-      {/* Tools */}
-      <section className="mt-28">
-        <h2 className="text-4xl font-bold">
-          Creator Tools
+      <p className="mt-6 text-2xl text-gray-600 max-w-3xl">
+        Free RPM, CPM, YouTube, TikTok, and creator
+        earnings calculators to estimate online revenue
+        from content and social media.
+      </p>
+
+      {/* CORE TOOLS */}
+      <section className="mt-16">
+        <h2 className="text-3xl font-bold mb-8">
+          Core Monetization Tools
         </h2>
 
-        <div className="grid md:grid-cols-3 gap-8 mt-12">
-          <Link
-            href="/tools/rpm-calculator"
-            className="border rounded-2xl p-8 hover:border-black transition"
-          >
-            <h3 className="text-2xl font-semibold">
-              RPM Calculator
-            </h3>
-
-            <p className="mt-4 text-gray-600">
-              Estimate creator earnings using RPM and
-              views.
-            </p>
-          </Link>
-          <Link
-  href="/tools/cpm-calculator"
-  className="border rounded-2xl p-8 hover:border-black transition"
->
-  <h3 className="text-2xl font-semibold">
-    CPM Calculator
-  </h3>
-
-  <p className="mt-4 text-gray-600">
-    Calculate CPM based on ad spend and impressions.
-  </p>
-</Link>
-<Link
-  href="/tools/youtube-money-calculator"
-  className="border rounded-2xl p-8 hover:border-black transition"
->
-  <h3 className="text-2xl font-semibold">
-    YouTube Money Calculator
-  </h3>
-
-  <p className="mt-4 text-gray-600">
-    Estimate YouTube earnings using views and CPM.
-  </p>
-</Link>
-<Link
-  href="/tools/tiktok-money-calculator"
-  className="border rounded-2xl p-8 hover:border-black transition"
->
-  <h3 className="text-2xl font-semibold">
-    TikTok Money Calculator
-  </h3>
-
-  <p className="mt-4 text-gray-600">
-    Estimate TikTok creator earnings using RPM and
-    views.
-  </p>
-</Link>
-<Link
-  href="/tools/instagram-earnings-calculator"
-  className="border rounded-2xl p-8 hover:border-black transition"
->
-  <h3 className="text-2xl font-semibold">
-    Instagram Earnings Calculator
-  </h3>
-
-  <p className="mt-4 text-gray-600">
-    Estimate Instagram sponsorship earnings.
-  </p>
-</Link>
-<Link
-  href="/tools/engagement-rate-calculator"
-  className="border rounded-2xl p-8 hover:border-black transition"
->
-  <h3 className="text-2xl font-semibold">
-    Engagement Rate Calculator
-  </h3>
-
-  <p className="mt-4 text-gray-600">
-    Calculate social media engagement rate.
-  </p>
-</Link>
-        </div>
-      </section>
-
-      {/* Platforms */}
-      <section className="mt-24">
-        <h2 className="text-4xl font-bold">
-          Browse Platforms
-        </h2>
-
-        <div className="grid md:grid-cols-4 gap-6 mt-10">
-          {categories.map((category) => (
+        <div className="grid md:grid-cols-3 gap-8">
+          {coreTools.map((tool) => (
             <Link
-              key={category}
-              href={`/category/${category}`}
-              className="border rounded-2xl p-8 hover:border-black transition"
-            >
-              <h3 className="text-2xl font-semibold capitalize">
-                {category}
-              </h3>
-
-              <p className="mt-4 text-gray-600">
-                Explore RPM trends for {category}
-                creators.
-              </p>
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* Niches */}
-      <section className="mt-28">
-        <h2 className="text-4xl font-bold">
-          Popular Niches
-        </h2>
-
-        <div className="flex flex-wrap gap-4 mt-10">
-          {tags.map((tag) => (
-            <Link
-              key={tag}
-              href={`/tag/${tag}`}
-              className="border rounded-full px-6 py-3 hover:border-black transition"
-            >
-              #{tag}
-            </Link>
-          ))}
-        </div>
-      </section>
-
-      {/* Featured Articles */}
-      <section className="mt-28">
-        <h2 className="text-4xl font-bold">
-          Featured RPM Articles
-        </h2>
-
-        <div className="grid md:grid-cols-3 gap-8 mt-12">
-          {featuredPosts.map((post) => (
-            <Link
-              key={post.slug}
-              href={`/blog/${post.slug}`}
+              key={tool.href}
+              href={tool.href}
               className="border rounded-2xl p-8 hover:border-black transition"
             >
               <h3 className="text-2xl font-semibold">
-                {post.title}
+                {tool.title}
               </h3>
 
               <p className="mt-4 text-gray-600">
-                {post.description}
-              </p>
-
-              <p className="mt-6 text-2xl font-bold">
-                {post.rpm}
+                {tool.description}
               </p>
             </Link>
           ))}
         </div>
       </section>
 
-      {/* SEO Content */}
-      <section className="mt-32 max-w-4xl">
+      {/* SECONDARY TOOLS */}
+      <section className="mt-20">
+        <h2 className="text-3xl font-bold mb-8">
+          Social Media Tools
+        </h2>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {secondaryTools.map((tool) => (
+            <Link
+              key={tool.href}
+              href={tool.href}
+              className="border rounded-2xl p-8 hover:border-black transition"
+            >
+              <h3 className="text-2xl font-semibold">
+                {tool.title}
+              </h3>
+
+              <p className="mt-4 text-gray-600">
+                {tool.description}
+              </p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {/* SEO CONTENT */}
+      <section className="mt-24 max-w-4xl">
         <h2 className="text-4xl font-bold">
-          What Is Creator RPM?
+          What Are Creator Finance Tools?
         </h2>
 
         <p className="mt-8 text-lg text-gray-700 leading-8">
-          RPM stands for revenue per mille, which
-          measures how much creators earn per 1,000
-          views after platform fees.
+          Creator finance tools help YouTubers,
+          TikTok creators, influencers, and publishers
+          estimate their earnings from RPM, CPM, and
+          advertising revenue.
         </p>
 
         <p className="mt-6 text-lg text-gray-700 leading-8">
-          Different niches generate different RPM
-          rates. Finance, AI, SaaS, investing,
-          insurance, and business content often
-          achieve the highest RPM because advertisers
-          pay premium rates for those audiences.
+          These calculators are widely used to
+          understand monetization performance,
+          compare platforms, and optimize content
+          strategy.
         </p>
 
         <p className="mt-6 text-lg text-gray-700 leading-8">
-          This website helps creators compare RPM
-          across YouTube, TikTok, Instagram, and
-          other creator platforms.
+          RPM (Revenue Per Mille) and CPM (Cost Per
+          Mille) are key metrics in digital content
+          monetization.
         </p>
       </section>
     </main>
