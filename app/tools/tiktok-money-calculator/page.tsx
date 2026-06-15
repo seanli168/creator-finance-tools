@@ -1,26 +1,24 @@
 import TikTokMoneyCalculator from './TikTokMoneyCalculator';
 
 export const metadata = {
-  title:
-    'TikTok Money Calculator - Creator Finance Tools',
+  title: 'TikTok Money Calculator - Creator Finance Tools',
 
   description:
-    'Estimate TikTok creator earnings using RPM and views.',
+    'Estimate TikTok earnings based on views and RPM.',
 
   keywords: [
     'TikTok Money Calculator',
-    'TikTok RPM',
     'TikTok Earnings Calculator',
-    'TikTok Creator Earnings',
-    'TikTok monetization',
+    'TikTok RPM',
+    'How Much Does TikTok Pay',
+    'TikTok Creator Rewards',
   ],
 
   openGraph: {
-    title:
-      'TikTok Money Calculator - Creator Finance Tools',
+    title: 'TikTok Money Calculator - Creator Finance Tools',
 
     description:
-      'Estimate TikTok creator earnings using RPM and views.',
+      'Estimate TikTok earnings using views and RPM.',
 
     url:
       'https://creator-finance-tools.vercel.app/tools/tiktok-money-calculator',
@@ -47,33 +45,20 @@ export default function Page() {
           '@type': 'Answer',
 
           text:
-            'TikTok earnings vary widely, but creators often earn between $0.20 and $8 RPM depending on monetization sources.',
+            'TikTok earnings vary by country, niche, and monetization program. RPM can vary significantly.',
         },
       },
 
       {
         '@type': 'Question',
 
-        name: 'What is TikTok RPM?',
+        name: 'How do I estimate TikTok earnings?',
 
         acceptedAnswer: {
           '@type': 'Answer',
 
           text:
-            'TikTok RPM measures creator earnings per 1,000 views after platform deductions.',
-        },
-      },
-
-      {
-        '@type': 'Question',
-
-        name: 'How do TikTok creators make money?',
-
-        acceptedAnswer: {
-          '@type': 'Answer',
-
-          text:
-            'TikTok creators earn money through creator programs, sponsorships, affiliate marketing, live gifts, and product sales.',
+            'Multiply total views by RPM and divide by 1000.',
         },
       },
     ],

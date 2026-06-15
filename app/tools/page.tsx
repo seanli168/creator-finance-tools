@@ -1,10 +1,11 @@
 import Link from 'next/link';
+
 export const metadata = {
   title:
     'Creator Tools - RPM, CPM & Earnings Calculators',
 
   description:
-    'Free creator monetization tools including RPM calculator, CPM calculator, YouTube money calculator, TikTok earnings calculator, and more.',
+    'Free creator monetization tools including RPM calculators, CPM calculators, YouTube earnings calculators, TikTok revenue calculators, and more.',
 };
 
 const tools = [
@@ -12,7 +13,28 @@ const tools = [
     title: 'RPM Calculator',
     href: '/tools/rpm-calculator',
     description:
-      'Estimate creator earnings using RPM and views.',
+      'Calculate RPM using revenue and views.',
+  },
+
+  {
+    title: 'TikTok RPM Calculator',
+    href: '/tools/tiktok-rpm-calculator',
+    description:
+      'Calculate TikTok RPM from views and revenue.',
+  },
+
+  {
+    title: 'YouTube Money Calculator',
+    href: '/tools/youtube-money-calculator',
+    description:
+      'Estimate YouTube earnings using views and CPM.',
+  },
+
+  {
+    title: 'TikTok Money Calculator',
+    href: '/tools/tiktok-money-calculator',
+    description:
+      'Estimate TikTok creator earnings and RPM.',
   },
 
   {
@@ -23,29 +45,25 @@ const tools = [
   },
 
   {
-    title: 'YouTube Money Calculator',
-    href: '/tools/youtube-money-calculator',
+    title: 'Instagram Earnings Calculator',
+    href: '/tools/instagram-earnings-calculator',
     description:
-      'Estimate YouTube earnings using views and CPM.',
+      'Estimate Instagram sponsorship earnings.',
   },
+
   {
-  title: 'TikTok Money Calculator',
-  href: '/tools/tiktok-money-calculator',
-  description:
-    'Estimate TikTok creator earnings and RPM.',
-},
-{
-  title: 'Instagram Earnings Calculator',
-  href: '/tools/instagram-earnings-calculator',
-  description:
-    'Estimate Instagram sponsorship earnings.',
-},
-{
-  title: 'Engagement Rate Calculator',
-  href: '/tools/engagement-rate-calculator',
-  description:
-    'Calculate social media engagement rate.',
-},
+    title: 'Engagement Rate Calculator',
+    href: '/tools/engagement-rate-calculator',
+    description:
+      'Calculate social media engagement rate.',
+  },
+
+  {
+    title: 'Creator Earnings Calculator',
+    href: '/tools/creator-earnings-calculator',
+    description:
+      'Estimate creator revenue across multiple platforms.',
+  },
 ];
 
 export default function ToolsPage() {
@@ -56,8 +74,8 @@ export default function ToolsPage() {
       </h1>
 
       <p className="mt-6 text-2xl text-gray-600 max-w-3xl">
-        Free calculators and creator monetization tools
-        for YouTube, TikTok, Instagram, and more.
+        Free calculators for YouTube, TikTok,
+        Instagram, RPM, CPM, and creator earnings.
       </p>
 
       <div className="grid md:grid-cols-3 gap-8 mt-16">
@@ -84,14 +102,21 @@ export default function ToolsPage() {
         </h2>
 
         <p className="mt-8 text-lg text-gray-700 leading-8">
-          Use these free creator calculators to estimate
-          RPM, CPM, YouTube revenue, and social media
-          earnings.
+          Use these free calculators to estimate
+          RPM, CPM, YouTube revenue, TikTok earnings,
+          and influencer monetization opportunities.
         </p>
 
         <p className="mt-6 text-lg text-gray-700 leading-8">
           These tools are designed for creators,
-          advertisers, marketers, and publishers.
+          marketers, advertisers, publishers, and
+          affiliate marketers who want quick revenue
+          estimates.
+        </p>
+
+        <p className="mt-6 text-lg text-gray-700 leading-8">
+          New calculators are added regularly as we
+          expand our creator finance tool library.
         </p>
       </section>
     </main>
