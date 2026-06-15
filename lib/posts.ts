@@ -5,88 +5,101 @@ import { remark } from 'remark';
 import html from 'remark-html';
 
 const postsDirectory = path.join(
-  process.cwd(),
-  'content',
-  'blog'
+process.cwd(),
+'content',
+'blog'
 );
 
 export function getAllPosts() {
-  const fileNames = fs
-    .readdirSync(postsDirectory)
-    .filter(
-      (fileName) =>
-        fileName.endsWith('.md') &&
-        !fileName.startsWith('_')
-    );
+if (!fs.existsSync(postsDirectory)) {
+return [];
+}
 
-  const allPosts = fileNames.map((fileName) => {
-    const slug = fileName.replace(/\.md$/, '');
+const fileNames = fs
+.readdirSync(postsDirectory)
+.filter(
+(fileName) =>
+fileName.endsWith('.md') &&
+!fileName.startsWith('_')
+);
 
-    const fullPath = path.join(
-      postsDirectory,
-      fileName
-    );
+const allPosts = fileNames.map((fileName) => {
+const slug = fileName.replace(
+/.md$/,
+''
+);
 
-    const fileContents = fs.readFileSync(
-      fullPath,
-      'utf8'
-    );
 
-    const matterResult =
-      matter(fileContents);
+const fullPath = path.join(
+  postsDirectory,
+  fileName
+);
 
-    return {
-      slug,
+const fileContents = fs.readFileSync(
+  fullPath,
+  'utf8'
+);
 
-      ...(matterResult.data as {
-        title: string;
-        date: string;
-        description: string;
-      }),
-    };
-  });
+const matterResult =
+  matter(fileContents);
 
-  return allPosts.sort(
-    (a, b) =>
-      new Date(b.date).getTime() -
-      new Date(a.date).getTime()
-  );
+return {
+  slug,
+
+  ...(matterResult.data as {
+    title: string;
+    date: string;
+    description: string;
+  }),
+};
+
+
+});
+
+return allPosts.sort(
+(a, b) =>
+new Date(b.date).getTime() -
+new Date(a.date).getTime()
+);
 }
 
 export async function getPostBySlug(
-  slug: string
+slug: string
 ) {
-  const fullPath = path.join(
-    postsDirectory,
-    `${slug}.md`
-  );
+const fullPath = path.join(
+postsDirectory,
+`${slug}.md`
+);
 
-  if (!fs.existsSync(fullPath)) {
-    return null;
-  }
+if (!fs.existsSync(fullPath)) {
+return null;
+}
 
-  const fileContents = fs.readFileSync(
-    fullPath,
-    'utf8'
-  );
+const fileContents = fs.readFileSync(
+fullPath,
+'utf8'
+);
 
-  const matterResult =
-    matter(fileContents);
+const matterResult =
+matter(fileContents);
 
-  const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content);
+const processedContent = await remark()
+.use(html)
+.process(matterResult.content);
 
-  return {
-    slug,
+return {
+slug,
 
-    contentHtml:
-      processedContent.toString(),
 
-    ...(matterResult.data as {
-      title: string;
-      date: string;
-      description: string;
-    }),
-  };
+contentHtml:
+  processedContent.toString(),
+
+...(matterResult.data as {
+  title: string;
+  date: string;
+  description: string;
+}),
+
+
+};
 }
