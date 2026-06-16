@@ -148,6 +148,81 @@ export default function HomePage() {
         </div>
       </section>
 
+{/* FEATURED GUIDES */}
+
+<section className="mt-24">
+  <h2 className="text-4xl font-bold">
+    Creator Monetization Guides
+  </h2>
+
+  <p className="mt-4 text-lg text-gray-600 max-w-3xl">
+    Learn how creators earn money on YouTube, TikTok,
+    affiliate marketing, and digital content platforms.
+  </p>
+
+  <div className="grid md:grid-cols-2 gap-8 mt-10">
+
+
+<Link
+  href="/youtube-rpm-guide"
+  className="border rounded-2xl p-8 hover:border-black transition"
+>
+  <h3 className="text-2xl font-semibold">
+    YouTube RPM Guide
+  </h3>
+
+  <p className="mt-4 text-gray-600">
+    Understand RPM, CPM, and how YouTube creators
+    maximize revenue.
+  </p>
+</Link>
+
+<Link
+  href="/youtube-monetization"
+  className="border rounded-2xl p-8 hover:border-black transition"
+>
+  <h3 className="text-2xl font-semibold">
+    YouTube Monetization Guide
+  </h3>
+
+  <p className="mt-4 text-gray-600">
+    Learn every revenue stream available to
+    YouTube creators.
+  </p>
+</Link>
+
+<Link
+  href="/tiktok-monetization"
+  className="border rounded-2xl p-8 hover:border-black transition"
+>
+  <h3 className="text-2xl font-semibold">
+    TikTok Monetization Guide
+  </h3>
+
+  <p className="mt-4 text-gray-600">
+    Discover how TikTok creators earn through
+    RPM, rewards, sponsorships, and affiliates.
+  </p>
+</Link>
+
+<Link
+  href="/affiliate-marketing-guide"
+  className="border rounded-2xl p-8 hover:border-black transition"
+>
+  <h3 className="text-2xl font-semibold">
+    Affiliate Marketing Guide
+  </h3>
+
+  <p className="mt-4 text-gray-600">
+    Learn how creators generate passive income
+    through affiliate marketing.
+  </p>
+</Link>
+
+
+  </div>
+</section>
+
       {/* LATEST BLOG POSTS */}
       <section className="mt-24 max-w-4xl">
         <h2 className="text-4xl font-bold">
