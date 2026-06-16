@@ -7,6 +7,7 @@ import {
 } from '@/lib/posts';
 
 import RelatedPosts from '@/components/RelatedPosts';
+import RelatedToolsByKeyword from '@/components/RelatedToolsByKeyword';
 
 export async function generateStaticParams() {
   const posts = getAllPosts();
@@ -41,6 +42,12 @@ export async function generateMetadata({
       description: post.description,
       type: 'article',
     },
+
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.description,
+    },
   };
 }
 
@@ -65,7 +72,7 @@ export default async function BlogPage({
         {post.title}
       </h1>
 
-      {/* Meta */}
+      {/* Date */}
       <p className="mt-4 text-gray-500 text-sm">
         {post.date}
       </p>
@@ -78,8 +85,15 @@ export default async function BlogPage({
         }}
       />
 
-      {/* Related Posts (SEO internal links boost) */}
-      <RelatedPosts currentSlug={slug} />
+      {/* Related Tools (SEO internal linking boost) */}
+      <RelatedToolsByKeyword
+        title={post.title}
+      />
+
+      {/* Related Posts (cluster linking) */}
+      <RelatedPosts
+        currentSlug={slug}
+      />
 
     </main>
   );
