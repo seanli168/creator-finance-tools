@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import HubPosts from '@/components/HubPosts';
 
 export const metadata = {
   title:
@@ -124,7 +125,14 @@ export default function AffiliateMarketingGuidePage() {
 
         </div>
       </section>
-
+<HubPosts
+  title="Related Affiliate Articles"
+  keyword={[
+    'affiliate',
+    'affiliate marketing',
+    'blogging',
+  ]}
+/>
       {/* SEO Content */}
       <section className="mt-24 prose prose-lg max-w-none">
 

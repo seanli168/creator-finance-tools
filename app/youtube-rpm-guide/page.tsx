@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import HubPosts from '@/components/HubPosts';
 
 export const metadata = {
 title: 'YouTube RPM Guide - Understand RPM & Creator Revenue',
@@ -50,6 +51,15 @@ YouTube RPM Guide </h1>
     </div>
   </section>
 
+<HubPosts
+  title="Related YouTube RPM Articles"
+  keyword={[
+    'youtube',
+    'rpm',
+    'cpm',
+    'youtube earnings',
+  ]}
+/>
   <section className="mt-24 prose prose-lg max-w-none">
     <h2>What Is YouTube RPM?</h2>
 

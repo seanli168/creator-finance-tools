@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import HubPosts from '@/components/HubPosts';
 
 export const metadata = {
 title:
@@ -113,7 +114,14 @@ return ( <main className="max-w-5xl mx-auto px-6 py-16">
 
     </div>
   </section>
-
+<HubPosts
+  title="Related YouTube Articles"
+  keyword={[
+    'youtube',
+    'youtube monetization',
+    'youtube earnings',
+  ]}
+/>
   {/* SEO Content */}
   <section className="mt-24 prose prose-lg max-w-none">
 
