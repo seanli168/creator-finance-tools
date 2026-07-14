@@ -21,7 +21,7 @@ export const metadata = {
       'Estimate TikTok earnings using views and RPM.',
 
     url:
-      'https://creator-finance-tools.vercel.app/tools/tiktok-money-calculator',
+      'https://creatorfinancehub.com/tools/tiktok-money-calculator',
 
     siteName: 'Creator Finance Tools',
 

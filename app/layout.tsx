@@ -3,6 +3,9 @@ import Link from 'next/link';
 import './globals.css';
 
 export const metadata: Metadata = {
+    metadataBase: new URL(
+    "https://creatorfinancehub.com"
+  ),
   title: {
     default: 'Creator Finance Tools',
     template: '%s',

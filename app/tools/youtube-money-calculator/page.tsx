@@ -23,7 +23,7 @@ export const metadata = {
       'Estimate YouTube earnings using CPM and total views.',
 
     url:
-      'https://creator-finance-tools.vercel.app/tools/youtube-money-calculator',
+      'https://creatorfinancehub.com/tools/youtube-money-calculator',
 
     siteName: 'Creator Finance Tools',
 

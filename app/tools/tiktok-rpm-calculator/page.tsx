@@ -21,7 +21,7 @@ export const metadata = {
       'Calculate TikTok RPM instantly from views and revenue.',
 
     url:
-      'https://creator-finance-tools.vercel.app/tools/tiktok-rpm-calculator',
+      'https://creatorfinancehub.com/tools/tiktok-rpm-calculator',
 
     siteName: 'Creator Finance Tools',
 

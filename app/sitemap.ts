@@ -4,7 +4,7 @@ import { getAllPosts } from '@/lib/posts';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl =
-    'https://creator-finance-tools.vercel.app';
+    'https://creatorfinancehub.com';
 
   const posts = getAllPosts();
 

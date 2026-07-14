@@ -23,7 +23,7 @@ export const metadata = {
       'Calculate social media engagement rate using followers and interactions.',
 
     url:
-      'https://creator-finance-tools.vercel.app/tools/engagement-rate-calculator',
+      'https://creatorfinancehub.com/tools/engagement-rate-calculator',
 
     siteName: 'Creator Finance Tools',
 

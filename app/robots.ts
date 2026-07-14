@@ -6,6 +6,6 @@ export default function robots() {
     },
 
     sitemap:
-      'https://creator-finance-tools.vercel.app/sitemap.xml',
+      'https://creatorfinancehub.com/sitemap.xml',
   };
 }

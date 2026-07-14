@@ -23,7 +23,7 @@ export const metadata = {
       'Estimate Instagram influencer earnings using followers and engagement rate.',
 
     url:
-      'https://creator-finance-tools.vercel.app/tools/instagram-earnings-calculator',
+      'https://creatorfinancehub.com/tools/instagram-earnings-calculator',
 
     siteName: 'Creator Finance Tools',
 

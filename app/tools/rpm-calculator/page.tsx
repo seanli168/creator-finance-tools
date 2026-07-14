@@ -22,7 +22,7 @@ export const metadata = {
       'Estimate creator earnings using RPM and total views.',
 
     url:
-      'https://creator-finance-tools.vercel.app/tools/rpm-calculator',
+      'https://creatorfinancehub.com/tools/rpm-calculator',
 
     siteName: 'Creator Finance Tools',
 

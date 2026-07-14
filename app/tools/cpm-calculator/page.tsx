@@ -20,7 +20,7 @@ export const metadata = {
       'Calculate CPM using ad spend and impressions.',
 
     url:
-      'https://creator-finance-tools.vercel.app/tools/cpm-calculator',
+      'https://creatorfinancehub.com/tools/cpm-calculator',
 
     siteName: 'Creator Finance Tools',
 
