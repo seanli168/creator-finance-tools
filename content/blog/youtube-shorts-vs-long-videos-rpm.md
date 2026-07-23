@@ -1,8 +1,13 @@
-
 ---
 title: "YouTube Shorts vs Long Videos RPM: Which Pays More?"
 description: "Compare YouTube Shorts RPM and long-form video RPM to understand which content format generates higher earnings."
 date: "2026-07-23"
+category: "youtube"
+tags:
+  - youtube
+  - rpm
+  - shorts
+  - monetization
 ---
 
 # YouTube Shorts vs Long Videos RPM: Which Pays More?
