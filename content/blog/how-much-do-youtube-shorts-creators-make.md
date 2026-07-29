@@ -1,7 +1,7 @@
 ---
 title: "How Much Do YouTube Shorts Creators Make In 2026?"
 description: "Learn how much YouTube Shorts creators make, Shorts RPM rates, revenue factors, and how creators maximize Shorts income."
-date: "2026-07-23"
+date: "2026-07-29"
 category: "youtube"
 tags:
   - youtube-shorts
